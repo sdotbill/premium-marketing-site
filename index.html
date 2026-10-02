@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Marketing — Social Media Marketing &amp; Management for Local Business</title>
+<meta name="description" content="Premium Marketing — social media marketing & management for local businesses in Davison, Flint & Genesee County. Content, community & ROI-tracked campaigns. Free growth audit: 989-990-1048.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#111133; --navy-2:#0b0e28; --card:#161a42; --card-2:#1a1f4d;
+  --blue:#2f9dff; --blue-deep:#1668dc; --cyan:#7dd3fc; --gold:#d4af37; --gold-soft:#e8c96a;
+  --ink:#eef1ff; --muted:#a9b2d8; --line:rgba(255,255,255,.09);
+  --radius:14px; --shadow:0 18px 40px rgba(0,0,0,.35);
+  --grad:linear-gradient(90deg,var(--blue),var(--cyan),var(--gold-soft));
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;background:var(--navy-2);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Sora','Inter',sans-serif;line-height:1.18;letter-spacing:-.015em}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+section{padding:88px 0;position:relative}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.sec-title{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:14px;font-weight:800}
+.sec-sub{color:var(--muted);max-width:660px;font-size:1.05rem}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- Nav ---------- */
+header.nav{position:sticky;top:0;z-index:100;background:rgba(17,17,51,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .25s}
+header.nav.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--ink)}
+.brand img{height:52px;width:auto;border-radius:8px}
+.brand-text{line-height:1.25}
+.brand-text strong{display:block;font-family:'Sora';font-size:1.02rem}
+.brand-text span{font-size:.72rem;color:var(--muted);letter-spacing:.06em}
+.nav-links{display:flex;gap:26px;align-items:center;list-style:none}
+.nav-links a{color:var(--ink);font-weight:500;font-size:.95rem;opacity:.85;transition:opacity .15s,color .15s}
+.nav-links a:hover{opacity:1;color:var(--gold-soft)}
+.btn{display:inline-block;font-weight:700;border-radius:10px;padding:14px 26px;font-size:1rem;transition:transform .15s,box-shadow .15s;border:none;cursor:pointer}
+.btn-call{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;box-shadow:0 8px 22px rgba(47,157,255,.35)}
+.btn-call:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(47,157,255,.5)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:#1a1405;box-shadow:0 8px 22px rgba(212,175,55,.3)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(212,175,55,.45)}
+.btn-ghost{background:rgba(255,255,255,.04);color:var(--ink);border:1px solid rgba(255,255,255,.22)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn-nav{padding:11px 20px;font-size:.92rem}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:26px;height:3px;background:var(--ink);margin:5px 0;border-radius:2px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:130px 0 120px;overflow:hidden;background:var(--navy-2)}
+.hero-bg{position:absolute;inset:0;
+  background:
+    radial-gradient(900px 500px at 12% 8%,rgba(47,157,255,.22),transparent 60%),
+    radial-gradient(800px 520px at 88% 90%,rgba(212,175,55,.14),transparent 60%),
+    radial-gradient(700px 600px at 70% 10%,rgba(125,211,252,.12),transparent 60%),
+    linear-gradient(rgba(9,11,36,.88),rgba(9,11,36,.82)),
+    url('../media-generation-premium-consulting-fb-cover-lo-0-d36d2b1f-27e9-4d70-8f4d-59db976b62eb.webp') center/cover no-repeat;
+  background-size:auto,auto,auto,auto,cover;
+  animation:heroDrift 18s ease-in-out infinite alternate}
+@keyframes heroDrift{
+  0%{background-position:0% 0%,100% 100%,80% 0%,0 0,center}
+  100%{background-position:8% 6%,92% 92%,62% 12%,0 0,center}
+}
+#particles{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:800px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;margin:12px 0 20px}
+.hero h1 .grad-text{display:block}
+.hero p.lead{font-size:clamp(1.05rem,2.1vw,1.3rem);color:#d6dbf5;max-width:640px;margin-bottom:14px}
+.hero p.lead strong{color:var(--ink)}
+.hero-credo{font-family:'Sora';font-weight:800;font-size:clamp(1.08rem,2.4vw,1.45rem);margin:4px 0 6px;letter-spacing:-.01em}
+.hero .chips{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 32px}
+.chips span{font-size:.82rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;border-radius:999px;padding:8px 17px;
+  background:rgba(47,157,255,.12);border:1px solid rgba(47,157,255,.45);color:var(--cyan)}
+.chips span.gold{background:rgba(212,175,55,.12);border-color:rgba(212,175,55,.5);color:var(--gold-soft)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-pulse{animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{
+  0%,100%{box-shadow:0 8px 22px rgba(212,175,55,.3)}
+  50%{box-shadow:0 8px 34px rgba(212,175,55,.6)}
+}
+.hero-note{margin-top:22px;font-size:.9rem;color:var(--muted)}
+.hero-note a{color:var(--ink);font-weight:600}
+.hero-ai{font-size:.95rem;color:var(--muted);margin-bottom:4px}
+.hero-ai strong{color:var(--cyan)}
+
+/* ---------- Stats band ---------- */
+.stats{background:var(--navy);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.stat strong{display:block;font-family:'Sora';font-weight:800;font-size:clamp(2rem,4.5vw,3rem);
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:.9rem;color:var(--muted);font-weight:600;letter-spacing:.04em}
+.stats-note{text-align:center;margin-top:22px;font-size:.78rem;color:var(--muted);opacity:.75}
+
+/* ---------- Funnel ---------- */
+.funnel{background:var(--navy);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.funnel-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.funnel-step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;position:relative;
+  transition:transform .2s,border-color .2s,box-shadow .2s}
+.funnel-step:hover{transform:translateY(-6px);border-color:rgba(212,175,55,.5);box-shadow:0 16px 36px rgba(212,175,55,.12)}
+.funnel-step.first{border-top:3px solid var(--gold);background:var(--card-2)}
+.funnel-step .step-tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:12px}
+.funnel-step h3{font-size:1.15rem;margin-bottom:10px}
+.funnel-step p{font-size:.93rem;color:var(--muted)}
+.funnel-cta{margin-top:40px;text-align:center}
+.funnel-cta p{color:var(--muted);margin-bottom:20px;font-size:1.02rem}
+.hero-free{font-size:1.02rem;color:#d6dbf5;margin-bottom:22px;max-width:640px}
+.hero-free strong{color:var(--gold-soft)}
+
+/* ---------- Services ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;position:relative;
+  transition:transform .2s,border-color .2s,box-shadow .2s}
+.svc-card:hover{transform:translateY(-6px);border-color:rgba(47,157,255,.55);box-shadow:0 16px 36px rgba(47,157,255,.14)}
+.svc-card.core{border-top:3px solid var(--gold);background:var(--card-2)}
+.svc-card.core:hover{border-top-color:var(--gold-soft);box-shadow:0 16px 36px rgba(212,175,55,.14)}
+.svc-card .icon{font-size:1.9rem;margin-bottom:14px}
+.svc-card h3{font-size:1.12rem;margin-bottom:10px}
+.svc-card p{font-size:.93rem;color:var(--muted)}
+.badge{position:absolute;top:-13px;right:18px;background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:#1a1405;font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:5px 12px;border-radius:999px;text-transform:uppercase}
+.svc-grid.rest{margin-top:22px}
+.svc-card.mini{padding:24px 22px}
+.svc-card.mini h3{font-size:1rem}
+.svc-card.mini p{font-size:.88rem}
+.svc-card{cursor:pointer}
+.svc-card:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.svc-card h3{padding-right:46px}
+.svc-chev{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;border:1px solid rgba(212,175,55,.55);display:flex;align-items:center;justify-content:center;transition:transform .35s ease,background .35s ease;pointer-events:none}
+.svc-chev::before{content:'+';font-size:1.35rem;line-height:1;color:var(--gold-soft);font-weight:700}
+.svc-card.open .svc-chev{transform:rotate(45deg);background:rgba(212,175,55,.14)}
+.svc-detail{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.svc-detail-inner{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.svc-detail-inner p{margin:0 0 10px}
+.svc-detail-inner p:last-child{margin-bottom:2px}
+
+/* ---------- How it works ---------- */
+.how{background:linear-gradient(180deg,#0b0e28 0%,#10143c 50%,#0b0e28 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+.how-step{background:rgba(22,26,66,.85);border:1px solid rgba(47,157,255,.22);border-radius:var(--radius);padding:28px 24px;
+  transition:transform .2s,border-color .2s,box-shadow .2s}
+.how-step:hover{transform:translateY(-6px);border-color:rgba(125,211,252,.6);box-shadow:0 16px 40px rgba(47,157,255,.22)}
+.how-step .step-num{margin-bottom:14px}
+.how-step strong{display:block;font-size:1.05rem;margin-bottom:10px}
+.how-step p{font-size:.92rem;color:var(--muted)}
+.how-edge{margin-top:44px;text-align:center}
+.how-edge p{font-size:1.1rem;color:#d6dbf5;max-width:720px;margin:0 auto 24px}
+.how-edge p strong{color:var(--gold-soft)}
+
+/* ---------- Differentiator ---------- */
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-top:40px}
+.diff-steps{list-style:none;margin-top:26px;display:flex;flex-direction:column;gap:18px}
+.diff-steps li{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:18px;transition:border-color .2s,transform .2s}
+.diff-steps li:hover{border-color:rgba(47,157,255,.45);transform:translateX(4px)}
+.step-num{flex:0 0 38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-deep));display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Sora'}
+.diff-steps strong{display:block;margin-bottom:4px}
+.diff-steps p{font-size:.92rem;color:var(--muted)}
+.diff-visual{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+.diff-visual h3{font-size:1.05rem;margin-bottom:18px;color:var(--gold-soft)}
+.metric{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.metric:last-child{border:none}
+.metric strong{font-family:'Sora';font-size:1.35rem;color:var(--blue)}
+.metric span{color:var(--muted);font-size:.85rem}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;margin-top:36px}
+.about-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px;transition:border-color .2s}
+.about-card:hover{border-color:rgba(212,175,55,.4)}
+.about-card h3{font-size:1.3rem;margin-bottom:6px}
+.about-card .role{color:var(--gold-soft);font-weight:600;font-size:.95rem;margin-bottom:16px}
+.about-card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.cred-list{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:12px}
+.cred-list li{display:flex;gap:12px;font-size:.93rem;color:#d6dbf5}
+.cred-list li::before{content:"✓";color:var(--gold);font-weight:800;flex:0 0 auto}
+
+/* ---------- Service area ---------- */
+.area{background:var(--navy);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.area-tags{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.area-tags span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:12px 26px;font-weight:600;font-size:1rem;transition:transform .18s,border-color .18s}
+.area-tags span:hover{transform:translateY(-3px);border-color:rgba(47,157,255,.5)}
+.area-tags span.hot{border-color:rgba(212,175,55,.6);color:var(--gold-soft)}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
+.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:36px}
+.contact-card h3{margin-bottom:18px;font-size:1.2rem}
+.big-call{display:block;text-align:center;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;font-family:'Sora';font-weight:800;font-size:clamp(1.5rem,3.5vw,2rem);border-radius:12px;padding:22px;margin-bottom:14px;box-shadow:0 10px 26px rgba(47,157,255,.35);transition:transform .15s,box-shadow .15s}
+.big-call:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(47,157,255,.5)}
+.contact-lines{list-style:none;display:flex;flex-direction:column;gap:14px;font-size:.96rem;color:var(--muted)}
+.contact-lines strong{color:var(--ink)}
+.contact-lines a{color:var(--ink);font-weight:600}
+form .field{margin-bottom:16px}
+form label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:#d6dbf5}
+form input,form textarea{width:100%;background:var(--navy-2);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:13px 15px;font-size:.95rem;font-family:inherit}
+form input:focus,form textarea:focus{outline:none;border-color:var(--blue)}
+form textarea{min-height:110px;resize:vertical}
+.form-note{font-size:.82rem;color:var(--muted);margin-top:12px}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--navy-2)}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.foot-brand img{height:44px;border-radius:8px}
+.foot-links{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+.foot-links a{color:var(--muted);font-size:.9rem}
+.foot-links a:hover{color:var(--ink)}
+.copyright{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* ---------- Sticky mobile call ---------- */
+.sticky-call{display:none;position:fixed;left:0;right:0;bottom:0;z-index:200;padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(11,14,40,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);
+  transform:translateY(110%);transition:transform .3s ease}
+.sticky-call.show{transform:none}
+.sticky-call a{display:block;text-align:center;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;
+  font-family:'Sora';font-weight:800;font-size:1.1rem;border-radius:10px;padding:14px;box-shadow:0 8px 22px rgba(47,157,255,.4)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .svc-grid,.how-steps{grid-template-columns:repeat(2,1fr)}
+  .funnel-steps{grid-template-columns:1fr}
+  .diff-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
+}
+@media(max-width:860px){
+  .hamburger{display:block}
+  .nav-links{position:absolute;top:76px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;padding:0 22px;gap:0;max-height:0;overflow:hidden;transition:max-height .3s ease;border-bottom:1px solid transparent}
+  .nav-links.open{max-height:560px;border-bottom-color:var(--line)}
+  .nav-links li{border-top:1px solid var(--line)}
+  .nav-links a{display:block;padding:15px 4px}
+  .nav-links .btn-nav{margin:14px 0;text-align:center}
+  section{padding:66px 0}
+  .hero{padding:96px 0 86px}
+  .sticky-call{display:block}
+  body{padding-bottom:0}
+}
+@media(max-width:600px){
+  .svc-grid,.how-steps{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
+  .hero-ctas .btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="topnav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Premium Marketing home">
+      <img src="assets/logo.png" alt="Premium Marketing logo">
+      <span class="brand-text"><strong>Premium Marketing</strong><span>Marketing &amp; Social Media Management</span></span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="#funnel">Start Free</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#difference">Results</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="btn btn-call btn-nav" href="tel:+19899901048">Call 989-990-1048</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Premium Marketing &mdash; Social Media Marketing &amp; Management</span>
+    <h1>Social media that <span class="grad-text">brings you customers.</span></h1>
+    <p class="lead"><strong>We run your social media &mdash; posts, reels, stories, and your community</strong> &mdash; so local customers find you, choose you, and keep coming back. Every campaign tracked, every result reported in plain numbers.</p>
+    <p class="hero-ai">Powered by smart automation behind the scenes &mdash; you just see the results.</p>
+    <div class="chips"><span>15 Years of Experience</span><span>ROI-Tracked</span><span class="gold">Local Experts</span></div>
+    <p class="hero-free reveal">Our <strong>free growth audit</strong> shows you exactly what&rsquo;s costing you customers &mdash; free, no strings attached.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold btn-pulse" href="tel:+19899901048">Get Your Free Growth Audit</a>
+      <a class="btn btn-ghost" href="#funnel">Start Free</a>
+    </div>
+    <p class="hero-note">Prefer email? <a href="mailto:sdotbill@gmail.com">sdotbill@gmail.com</a> &nbsp;&middot;&nbsp; Mon&ndash;Fri, 9am&ndash;5pm &nbsp;&middot;&nbsp; Davison, MI</p>
+  </div>
+</section>
+
+<!-- FUNNEL -->
+<section id="funnel" class="funnel">
+  <div class="wrap">
+    <span class="eyebrow reveal">Start free</span>
+    <h2 class="sec-title reveal">Start free. <span class="grad-text">Grow from there.</span></h2>
+    <p class="sec-sub reveal">No pitch, no pressure. Here&rsquo;s exactly how working with us goes.</p>
+    <div class="funnel-steps">
+      <div class="funnel-step first reveal">
+        <span class="step-tag">Step 1 &mdash; Free</span>
+        <h3>Free Growth Audit</h3>
+        <p>We tear down your online presence and show you exactly what&rsquo;s costing you customers &mdash; free, no strings attached. You keep the findings either way.</p>
+      </div>
+      <div class="funnel-step reveal">
+        <span class="step-tag">Step 2 &mdash; Your call</span>
+        <h3>Pick your growth plan</h3>
+        <p>Social media management, ads, SEO, landing pages &mdash; pick what fits your business and your budget. We&rsquo;ll tell you honestly what&rsquo;ll move the needle fastest.</p>
+      </div>
+      <div class="funnel-step reveal">
+        <span class="step-tag">Step 3 &mdash; We deliver</span>
+        <h3>We do the work</h3>
+        <p>You run your business while we run your marketing &mdash; and you watch the customers come in, tracked in plain numbers on every report.</p>
+      </div>
+    </div>
+    <div class="funnel-cta reveal">
+      <p>It all starts with one free call.</p>
+      <a class="btn btn-gold btn-pulse" href="tel:+19899901048">Get Your Free Growth Audit</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat reveal"><strong><span class="counter" data-target="2400" data-suffix="+">0</span></strong><span>Leads Generated</span></div>
+      <div class="stat reveal"><strong><span class="counter" data-target="1200000" data-compact="m" data-prefix="$" data-suffix="+">0</span></strong><span>Revenue Tracked</span></div>
+      <div class="stat reveal"><strong><span class="counter" data-target="890" data-suffix="+">0</span></strong><span>New &amp; Repeat Customers</span></div>
+      <div class="stat reveal"><strong><span class="counter" data-target="3400" data-suffix="+">0</span></strong><span>Posts &amp; Videos Published</span></div>
+    </div>
+    <p class="stats-note">Representative results across client campaigns.</p>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow reveal">What we do</span>
+    <h2 class="sec-title reveal">After your free audit, <span class="grad-text">here&rsquo;s how we grow you.</span></h2>
+    <p class="sec-sub reveal">Thirteen ways we turn attention into customers &mdash; every one of them measured in customers and revenue. Social media management leads; the rest fire when you&rsquo;re ready to scale.</p>
+    <div class="svc-grid">
+      <div class="svc-card core reveal" tabindex="0" role="button" aria-expanded="false">
+        <div class="icon">&#128241;</div>
+        <h3>Social Media Management</h3>
+        <p>Your content engine. Posts, reels, and stories built to get seen &mdash; plus community management that turns followers into buyers across Facebook, Instagram, TikTok, and YouTube.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>We take over your business&rsquo;s social media completely &mdash; planning, creating, and publishing posts, reels, and stories across Facebook, Instagram, TikTok, and YouTube, and answering comments and messages on your behalf.</p><p>New customers discover you through consistent, professional content showing up in their feeds. Existing customers stay engaged and keep coming back because your business never fades from view.</p></div></div>
+      </div>
+      <div class="svc-card core reveal" tabindex="0" role="button" aria-expanded="false">
+        <div class="icon">&#128269;</div>
+        <h3>Free Growth Audit</h3>
+        <p>A no-BS teardown of your online presence. We show you three things currently costing you customers &mdash; free, no strings attached.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>A free, no-obligation review of your entire online presence &mdash; social profiles, Google listing, website, and reviews. We pinpoint the specific gaps currently costing you customers and hand you the findings in plain language, whether or not you ever hire us.</p><p>Most owners discover at least three fixable problems they never knew they had &mdash; and a clear picture of what it would take to fix them.</p></div></div>
+      </div>
+      <div class="svc-card core reveal" tabindex="0" role="button" aria-expanded="false">
+        <span class="badge">Our Edge</span>
+        <div class="icon">&#128202;</div>
+        <h3>Tracked Landing Pages</h3>
+        <p>Pages that mirror your site but track every click, call, and customer. You&rsquo;ll know exactly how many new and repeat customers each campaign generated. Real ROI, real numbers.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>We build dedicated landing pages that mirror your website and connect them to your ads, call links, and campaigns. Every click, call, and customer is tracked back to the exact campaign that produced it.</p><p>You&rsquo;ll know precisely how many new and repeat customers your marketing generated &mdash; reported in plain numbers every month, so every dollar is accounted for.</p></div></div>
+      </div>
+    </div>
+    <div class="svc-grid rest">
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><h3>SEO &amp; Local Search</h3><p>Get found first on Google when customers are ready to buy.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Search engine optimization that gets your business found on Google when nearby customers search for what you offer. We optimize your Google Business Profile, website content, and local listings so you show up in the map pack and top results.</p><p>New customers find you at the exact moment they&rsquo;re ready to buy &mdash; instead of finding your competitor.</p></div></div></div>
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><h3>Paid Advertising</h3><p>Google and Meta ads managed for return on ad spend, not impressions.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Professionally managed advertising on Google and Meta, built around one goal: return on your ad spend. We handle targeting, ad creative, budgets, and ongoing optimization, then report exactly what each dollar brought back.</p><p>Your ads reach new customers who are actively looking for your services, while timely offers keep past customers coming back.</p></div></div></div>
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><h3>Email &amp; SMS Campaigns</h3><p>Turn one-time buyers into repeat revenue on autopilot.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Direct marketing to people who already know you &mdash; past customers and prospects who asked to hear from you. We design and send promotions, reminders, and updates that bring previous buyers back through your door and turn one-time purchases into repeat business.</p><p>It&rsquo;s the lowest-cost way to generate revenue from customers you&rsquo;ve already earned.</p></div></div></div>
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><h3>Reputation Management</h3><p>Review generation and response systems that build and protect your five-star reputation.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>A system that generates a steady stream of genuine customer reviews and makes sure every review &mdash; good or bad &mdash; gets a professional response. Strong ratings make new customers choose you when they&rsquo;re comparing options online.</p><p>When past customers see you value their feedback, they&rsquo;re more likely to return &mdash; and to recommend you to others.</p></div></div></div>
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><h3>Website Design</h3><p>Sites engineered to convert visitors into customers &mdash; not digital brochures.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>A modern website built to convert visitors into customers &mdash; fast, mobile-friendly, and designed around one job: getting the call, the booking, or the sale. New customers who find you on Google or social media land on a site that earns their trust instantly.</p><p>Existing customers get an easy way to reach you, book again, or buy again &mdash; without friction.</p></div></div></div>
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><h3>Smart Automation</h3><p>Behind-the-scenes tools that do more of the heavy lifting &mdash; faster turnaround, lower cost, same personal touch where it counts.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Behind-the-scenes tools that handle the repetitive work &mdash; follow-ups, scheduling, review requests, and routine customer messages &mdash; without losing the personal touch where it counts. You respond faster than competitors and miss fewer opportunities.</p><p>Your customers just notice you&rsquo;re always quick, always professional, always on it.</p></div></div></div>
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><h3>Podcast Creation</h3><p>Concept to published episodes. Your voice, everywhere your customers listen.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>We take your podcast from concept to published episodes &mdash; recording guidance, editing, and distribution to every major platform. Your voice reaches new audiences who discover you through search and recommendations, building trust before they ever contact you.</p><p>Regular episodes keep past customers hearing from you, so your business stays at the front of their minds.</p></div></div></div>
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><h3>Custom App Development</h3><p>Mobile and web apps built around your business.</p>
+      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>A mobile or web app built specifically around your business &mdash; booking, ordering, loyalty rewards, or whatever serves your customers best. New customers get a polished, modern experience from the first tap.</p><p>An app on a customer&rsquo;s phone is a direct line to them: repeat customers get one-tap reordering, reminders, and rewards that keep them loyal.</p></div></div></div>
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><h3>Business Development</h3><p>Strategy, partnerships, and growth systems for companies ready to scale.</p>
+        <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Strategic guidance on growing your company &mdash; partnerships, referral systems, pricing, and new revenue streams. We look at your whole business the way a marketing partner should: not just where customers come from, but how you keep them and grow what each one is worth.</p><p>Built for established businesses ready to scale beyond word of mouth.</p></div></div>
+      <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false">
+        <h3>Content Creation</h3>
+        <p>Professional photos, videos, and graphics made for your business &mdash; formatted for every platform.</p>
+        <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Professional photos, videos, and graphics created for your business and formatted for every platform. Great content is what stops the scroll &mdash; it&rsquo;s how new customers notice you in a crowded feed and how your business looks established and trustworthy.</p><p>We produce a steady supply, so your social media, website, and ads always look sharp &mdash; without you ever picking up a camera.</p></div></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="how">
+  <div class="wrap">
+    <span class="eyebrow reveal">How it works</span>
+    <h2 class="sec-title reveal">You run your business. <span class="grad-text">We run your social media.</span></h2>
+    <p class="sec-sub reveal">No content calendar to stress over, no DMs to chase. Here&rsquo;s exactly what you get when you hire us.</p>
+    <div class="how-steps">
+      <div class="how-step reveal">
+        <span class="step-num">1</span>
+        <div><strong>We learn your business</strong><p>A quick kickoff call. We learn what you sell, who your customers are, and what makes you different &mdash; then build your content plan around it.</p></div>
+      </div>
+      <div class="how-step reveal">
+        <span class="step-num">2</span>
+        <div><strong>Content planned &amp; posted for you</strong><p>Posts, reels, and stories created and published on your schedule &mdash; across Facebook, Instagram, TikTok, and YouTube. You approve the vibe; we handle everything else.</p></div>
+      </div>
+      <div class="how-step reveal">
+        <span class="step-num">3</span>
+        <div><strong>We manage your community</strong><p>Comments answered, messages handled, reviews watched. Your customers always feel heard &mdash; even when you&rsquo;re busy running the shop.</p></div>
+      </div>
+      <div class="how-step reveal">
+        <span class="step-num">4</span>
+        <div><strong>A simple monthly report</strong><p>One clear report: what we posted, who it reached, and what it brought you &mdash; new customers, calls, and revenue. No jargon.</p></div>
+      </div>
+    </div>
+    <div class="how-edge reveal">
+      <p><strong>Our edge:</strong> we use the latest tools and automation behind the scenes, so you get more done for less &mdash; without lifting a finger.</p>
+      <a class="btn btn-gold" href="tel:+19899901048">Start With a Free Audit</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATOR -->
+<section id="difference" class="diff">
+  <div class="wrap">
+    <span class="eyebrow reveal">How we&rsquo;re different</span>
+    <h2 class="sec-title reveal">Marketing you can <span class="grad-text">measure</span></h2>
+    <p class="sec-sub reveal">Our tracked landing pages prove exactly what every dollar did &mdash; every click, every call, every customer, reported in plain numbers.</p>
+    <div class="diff-grid">
+      <div class="reveal">
+        <ul class="diff-steps">
+          <li><span class="step-num">1</span><div><strong>Mirror pages</strong><p>We build landing pages that look just like your site &mdash; used only by people who click your ads, call-now links, and campaign links.</p></div></li>
+          <li><span class="step-num">2</span><div><strong>Track every action</strong><p>Every click, call, and customer is tracked to a unique visitor, so nothing gets double-counted or guessed at.</p></div></li>
+          <li><span class="step-num">3</span><div><strong>Report real ROI</strong><p>You see exactly how many new and repeat customers each campaign generated &mdash; in plain numbers you can take to the bank.</p></div></li>
+        </ul>
+      </div>
+      <div class="diff-visual reveal">
+        <h3>What a monthly report looks like</h3>
+        <div class="metric"><span>New customers from campaigns</span><strong>38</strong></div>
+        <div class="metric"><span>Repeat customers re-engaged</span><strong>52</strong></div>
+        <div class="metric"><span>Calls tracked to ads</span><strong>117</strong></div>
+        <div class="metric"><span>Cost per new customer</span><strong>$21</strong></div>
+        <div class="metric"><span>Revenue tracked to campaigns</span><strong>$48,300</strong></div>
+        <p style="margin-top:16px;font-size:.82rem;color:var(--muted)">Illustrative example &mdash; your numbers come from your campaigns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow reveal">About</span>
+    <h2 class="sec-title reveal">About <span class="grad-text">Premium Marketing</span></h2>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <h3>William Aldred</h3>
+        <p class="role">Owner &amp; Founder, Premium Marketing</p>
+        <p>William Aldred is the Owner and Founder of Premium Marketing. With 15 years of experience in sales and digital media &mdash; including leadership roles as a digital media executive &mdash; he has spent his career helping local businesses grow through practical, results-focused marketing.</p>
+        <p>Every engagement starts with a clear picture of what success looks like: more customers, measurable ROI, and reporting in plain numbers. Premium Marketing was founded in 2023 to give local businesses in Genesee County access to the same caliber of marketing larger companies rely on.</p>
+      </div>
+      <div class="about-card reveal">
+        <h3>Track record</h3>
+        <ul class="cred-list">
+          <li>15 years in sales, digital media &amp; business development</li>
+          <li>Former digital media executive</li>
+          <li>Trained local business owners through digital seminars &amp; Q&amp;A sessions</li>
+          <li>Owner of Premium Marketing since 2023</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section id="area" class="area">
+  <div class="wrap">
+    <span class="eyebrow reveal">Service area</span>
+    <h2 class="sec-title reveal">Proudly local</h2>
+    <p class="sec-sub reveal" style="margin:0 auto">We work with small to medium sized businesses across the region &mdash; close enough to shake your hand.</p>
+    <div class="area-tags reveal">
+      <span class="hot">Davison</span><span class="hot">Flint</span><span>Genesee County</span><span>Surrounding Counties</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">Step 1 &mdash; Start free</span>
+    <h2 class="sec-title reveal">Get your <span class="grad-text">free growth audit</span></h2>
+    <p class="sec-sub reveal">Three things costing you customers &mdash; free, no strings. Call, email, or send the form. Your competitors won&rsquo;t.</p>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3>Talk to us directly</h3>
+        <a class="big-call" href="tel:+19899901048">&#128222; 989-990-1048</a>
+        <ul class="contact-lines">
+          <li><strong>Email:</strong> <a href="mailto:sdotbill@gmail.com">sdotbill@gmail.com</a></li>
+          <li><strong>Address:</strong> 8253 Meadowwood Dr, Davison, MI 48423</li>
+          <li><strong>Hours:</strong> Monday&ndash;Friday, 9:00 AM &ndash; 5:00 PM</li>
+        </ul>
+      </div>
+      <div class="contact-card reveal">
+        <h3>Request your audit</h3>
+        <form id="audit-form">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Jane Smith"></div>
+          <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" type="text" required autocomplete="organization" placeholder="Smith's Auto Repair"></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="989-555-0123"></div>
+          <div class="field"><label for="f-msg">What&rsquo;s your biggest marketing headache?</label><textarea id="f-msg" name="message" placeholder="Nobody finds us on Google&hellip;"></textarea></div>
+          <button class="btn btn-gold" type="submit" style="width:100%">Send Audit Request</button>
+          <p class="form-note">This opens your email app with the request pre-filled &mdash; addressed to sdotbill@gmail.com. No spam, ever.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="assets/logo.png" alt="Premium Marketing logo">
+          <div><strong>Premium Marketing</strong><br><span style="font-size:.8rem;color:var(--muted)">Marketing &amp; Social Media Management</span></div>
+        </div>
+        <p style="font-size:.88rem;color:var(--muted);max-width:340px">Social media marketing &amp; management for local business. Results-driven and ROI-tracked &mdash; serving Davison, Flint, Genesee County and surrounding counties.</p>
+      </div>
+      <ul class="foot-links">
+        <li><a href="#funnel">Start Free</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#difference">Results</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+19899901048">989-990-1048</a></li>
+      </ul>
+    </div>
+    <div class="copyright">
+      <span>&copy; <span id="year">2026</span> Premium Marketing. All rights reserved.</span>
+      <span>8253 Meadowwood Dr, Davison, MI 48423</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-call" id="stickyCall">
+  <a href="tel:+19899901048">&#128222; Call Now &mdash; Free Audit</a>
+</div>
+
+<script>
+// Sticky nav shadow + sticky mobile call button
+const nav = document.getElementById('topnav');
+const stickyCall = document.getElementById('stickyCall');
+addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', scrollY > 10);
+  stickyCall.classList.toggle('show', scrollY > 650);
+}, {passive:true});
+
+// Mobile menu
+const burger = document.getElementById('hamburger'), links = document.getElementById('navlinks');
+burger.addEventListener('click', () => {
+  const open = links.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+// Reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+}), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Animated counters
+const fmt = n => n.toLocaleString('en-US');
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  cio.unobserve(e.target);
+  const target = +e.target.dataset.target, dur = 1600, t0 = performance.now();
+  const prefix = e.target.dataset.prefix || '', suffix = e.target.dataset.suffix || '';
+  const compactM = e.target.dataset.compact === 'm';
+  const tick = t => {
+    const p = Math.min((t - t0) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    const val = target * eased;
+    e.target.textContent = prefix + (compactM ? (val / 1e6).toFixed(1) + 'M' : fmt(Math.round(val))) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}), {threshold:.4});
+document.querySelectorAll('.counter').forEach(el => cio.observe(el));
+
+// Hero particles — drifting light dots
+(() => {
+  const cv = document.getElementById('particles');
+  const ctx = cv.getContext('2d');
+  let w, h, pts = [];
+  const COLORS = ['47,157,255','125,211,252','212,175,55'];
+  function resize() {
+    const r = cv.parentElement.getBoundingClientRect();
+    w = cv.width = r.width; h = cv.height = r.height;
+  }
+  function spawn() {
+    pts = [];
+    const n = Math.min(90, Math.floor(w * h / 16000));
+    for (let i = 0; i < n; i++) {
+      pts.push({
+        x: Math.random() * w, y: Math.random() * h,
+        vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35,
+        r: Math.random() * 1.8 + .6,
+        c: COLORS[Math.floor(Math.random() * COLORS.length)],
+        a: Math.random() * .5 + .25
+      });
+    }
+  }
+  function frame() {
+    ctx.clearRect(0, 0, w, h);
+    for (const p of pts) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > w) p.vx *= -1;
+      if (p.y < 0 || p.y > h) p.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, 6.2832);
+      ctx.fillStyle = 'rgba(' + p.c + ',' + p.a + ')';
+      ctx.shadowColor = 'rgba(' + p.c + ',.8)';
+      ctx.shadowBlur = 8;
+      ctx.fill();
+    }
+    ctx.shadowBlur = 0;
+    requestAnimationFrame(frame);
+  }
+  resize(); spawn(); frame();
+  let rt;
+  addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { resize(); spawn(); }, 200); });
+})();
+
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Audit form -> mailto
+document.getElementById('audit-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const subject = encodeURIComponent('Free Growth Audit Request — ' + (v('f-biz') || 'New inquiry'));
+  const body = encodeURIComponent(
+    'Name: ' + v('f-name') + '\n' +
+    'Business: ' + v('f-biz') + '\n' +
+    'Phone: ' + v('f-phone') + '\n\n' +
+    'Marketing headache:\n' + v('f-msg')
+  );
+  location.href = 'mailto:sdotbill@gmail.com?subject=' + subject + '&body=' + body;
+});
+
+// Service card accordion — one open at a time
+(function(){
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.svc-card'));
+  function closeCard(card){
+    card.classList.remove('open');
+    card.setAttribute('aria-expanded','false');
+    var d=card.querySelector('.svc-detail');
+    if(d){d.style.maxHeight='0px';d.setAttribute('aria-hidden','true');}
+  }
+  cards.forEach(function(card){
+    var detail=card.querySelector('.svc-detail');
+    if(!detail) return;
+    var chev=document.createElement('span');
+    chev.className='svc-chev';chev.setAttribute('aria-hidden','true');
+    card.appendChild(chev);
+    function toggle(){
+      var willOpen=!card.classList.contains('open');
+      cards.forEach(function(o){if(o!==card)closeCard(o);});
+      if(willOpen){
+        card.classList.add('open');
+        card.setAttribute('aria-expanded','true');
+        detail.setAttribute('aria-hidden','false');
+        detail.style.maxHeight=detail.scrollHeight+'px';
+      }else{closeCard(card);}
+    }
+    card.addEventListener('click',toggle);
+    card.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}
+    });
+  });
+  var rt;addEventListener('resize',function(){
+    clearTimeout(rt);rt=setTimeout(function(){
+      var open=document.querySelector('.svc-card.open .svc-detail');
+      if(open)open.style.maxHeight=open.scrollHeight+'px';
+    },200);
+  });
+})();
+</script>
+</body>
+</html>
