@@ -125,6 +125,25 @@ header.nav.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.45)}
 .hero-free{font-size:1.02rem;color:#d6dbf5;margin-bottom:22px;max-width:640px}
 .hero-free strong{color:var(--gold-soft)}
 
+/* ---------- Plans ---------- */
+.plans{background:var(--navy);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tier-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:44px;max-width:940px}
+.tier-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:38px 34px;position:relative;
+  transition:transform .2s,border-color .2s,box-shadow .2s;display:flex;flex-direction:column}
+.tier-card:hover{transform:translateY(-6px);border-color:rgba(47,157,255,.55);box-shadow:0 16px 36px rgba(47,157,255,.14)}
+.tier-card.featured{border-top:3px solid var(--gold);background:var(--card-2)}
+.tier-card.featured:hover{box-shadow:0 16px 36px rgba(212,175,55,.14)}
+.tier-card h3{font-size:1.35rem;margin-bottom:8px}
+.tier-price{margin:6px 0 10px}
+.tier-price strong{font-family:'Sora';font-weight:800;font-size:2.6rem;letter-spacing:-.02em}
+.tier-price span{color:var(--muted);font-size:1rem;font-weight:600}
+.tier-desc{color:var(--muted);font-size:.95rem;margin-bottom:20px}
+.tier-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px;flex:1}
+.tier-list li{display:flex;gap:12px;font-size:.95rem;color:#d6dbf5}
+.tier-list li::before{content:"\2713";color:var(--gold);font-weight:800;flex:0 0 auto}
+.tier-cta{text-align:center}
+.tier-note{text-align:center;color:var(--muted);margin-top:30px;font-size:.95rem;max-width:640px;margin-left:auto;margin-right:auto}
+
 /* ---------- Services ---------- */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
 .svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;position:relative;
@@ -242,7 +261,8 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
 @media(max-width:900px){
   .svc-grid,.how-steps{grid-template-columns:repeat(2,1fr)}
   .funnel-steps{grid-template-columns:1fr}
-  .diff-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .diff-grid,.about-grid,.contact-grid,.tier-grid{grid-template-columns:1fr}
+  .tier-grid{max-width:560px}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
 }
 @media(max-width:860px){
@@ -275,6 +295,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navlinks">
       <li><a href="#funnel">Start Free</a></li>
+      <li><a href="#plans">Plans</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#how">How It Works</a></li>
       <li><a href="#difference">Results</a></li>
@@ -332,6 +353,45 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
       <p>It all starts with one free call.</p>
       <a class="btn btn-gold btn-pulse" href="tel:+19899901048">Get Your Free Growth Audit</a>
     </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section id="plans" class="plans">
+  <div class="wrap">
+    <span class="eyebrow reveal">Forge &mdash; growth plans</span>
+    <h2 class="sec-title reveal">One system. <span class="grad-text">Two ways to grow.</span></h2>
+    <p class="sec-sub reveal">Forge is your AI business manager &mdash; it drafts your posts, tracks your prospects, watches your reviews, and keeps your invoices from slipping through the cracks. Pick how hands-on you want to be.</p>
+    <div class="tier-grid">
+      <div class="tier-card reveal">
+        <h3>Forge Self-Serve</h3>
+        <p class="tier-price"><strong>$297</strong><span>/month</span></p>
+        <p class="tier-desc">Your AI business manager, customized for your business. You stay in the driver&rsquo;s seat.</p>
+        <ul class="tier-list">
+          <li>Social media posts drafted for you &mdash; you approve and post</li>
+          <li>Prospect and lead tracking in one place</li>
+          <li>Review monitoring with response drafts</li>
+          <li>Invoice tracking and payment reminders</li>
+          <li>Monthly performance snapshot</li>
+        </ul>
+        <a class="btn btn-ghost tier-cta" href="#contact">Start With a Free Audit</a>
+      </div>
+      <div class="tier-card featured reveal">
+        <span class="badge">Most popular</span>
+        <h3>Forge Managed</h3>
+        <p class="tier-price"><strong>$697</strong><span>/month</span></p>
+        <p class="tier-desc">Everything in Self-Serve, plus our team runs it for you &mdash; start to finish.</p>
+        <ul class="tier-list">
+          <li>Everything in Forge Self-Serve</li>
+          <li>Posts published and community managed for you</li>
+          <li>Monthly campaign planned and executed</li>
+          <li>Review responses handled</li>
+          <li>Monthly results call &mdash; plain numbers, no jargon</li>
+        </ul>
+        <a class="btn btn-gold tier-cta" href="#contact">Start With a Free Audit</a>
+      </div>
+    </div>
+    <p class="tier-note reveal">Every plan starts with a free growth audit &mdash; we&rsquo;ll recommend the tier that fits your business and your budget.</p>
   </div>
 </section>
 
@@ -542,6 +602,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
       </div>
       <ul class="foot-links">
         <li><a href="#funnel">Start Free</a></li>
+        <li><a href="#plans">Plans</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#how">How It Works</a></li>
         <li><a href="#difference">Results</a></li>
