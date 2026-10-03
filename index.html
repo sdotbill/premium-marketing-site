@@ -205,6 +205,14 @@ header.nav.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.45)}
 .about-card h3{font-size:1.3rem;margin-bottom:6px}
 .about-card .role{color:var(--gold-soft);font-weight:600;font-size:.95rem;margin-bottom:16px}
 .about-card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
+.testi-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;transition:border-color .2s}
+.testi-card:hover{border-color:rgba(212,175,55,.4)}
+.testi-card .quote{font-size:1.02rem;line-height:1.65;color:#fff;flex:1}
+.testi-card .quote::before{content:"\201C";display:block;font-size:2.4rem;line-height:1;color:var(--gold-soft);margin-bottom:6px}
+.testi-card .who{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.testi-card .who strong{display:block;font-size:.95rem}
+.testi-card .who span{color:var(--muted);font-size:.82rem}
 .cred-list{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:12px}
 .cred-list li{display:flex;gap:12px;font-size:.93rem;color:#d6dbf5}
 
@@ -261,7 +269,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
 @media(max-width:900px){
   .svc-grid,.how-steps{grid-template-columns:repeat(2,1fr)}
   .funnel-steps{grid-template-columns:1fr}
-  .diff-grid,.about-grid,.contact-grid,.tier-grid{grid-template-columns:1fr}
+  .diff-grid,.about-grid,.contact-grid,.tier-grid,.testi-grid{grid-template-columns:1fr}
   .tier-grid{max-width:560px}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
 }
@@ -515,6 +523,29 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
         <div class="metric"><span>Cost per new customer</span><strong>$21</strong></div>
         <div class="metric"><span>Revenue tracked to campaigns</span><strong>$48,300</strong></div>
         <p style="margin-top:16px;font-size:.82rem;color:var(--muted)">Illustrative example &mdash; your numbers come from your campaigns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <span class="eyebrow reveal">Recommendations</span>
+    <h2 class="sec-title reveal">Don&rsquo;t take <span class="grad-text">our word</span> for it</h2>
+    <p class="sec-sub reveal">Real recommendations from people who have worked with William &mdash; from LinkedIn.</p>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <p class="quote">I worked with William at LocalEdge (Hearst Media Services) for over a year and he was one of the most motivated and top earning consultants in the office. Very successful individual with exciting talent. It was a pleasure to have him as a colleague!</p>
+        <div class="who"><strong>Jeffrey Shusterich</strong><span>Colleague &mdash; LocalEdge (Hearst Media Services)</span></div>
+      </div>
+      <div class="testi-card reveal">
+        <p class="quote">Bill is focussed with direction to accomplish project creation at hand. He is very smart and executes his intelligent well. He also just won Presidential Club for increasing his small digital assignment to one of the largest in the company. He is a professional, fast learner and tremendous work effort.</p>
+        <div class="who"><strong>Mitch Steelman</strong><span>Direct manager &mdash; Account Manager, Lakeland Engineering Equipment Company</span></div>
+      </div>
+      <div class="testi-card reveal">
+        <p class="quote">William is a Leader and amazing people person. He would be an asset to any company. He is flexible and able to rise to any challenge. There is no one better at closing the deal.</p>
+        <div class="who"><strong>Kris Oakes</strong><span>Direct report</span></div>
       </div>
     </div>
   </div>
