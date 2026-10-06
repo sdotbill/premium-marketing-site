@@ -52,6 +52,20 @@ header p{color:#a9b2d8;font-size:.85rem;letter-spacing:.08em}
 .annual h3{margin-bottom:6px}
 .annual p{color:#a9b2d8;font-size:.92rem}
 .annual .price{font-size:1.5rem;font-weight:800;color:#e8c96a}
+.fullpay{background:linear-gradient(135deg,#1a1440,#2a1e08);border:2px solid #e8c96a;border-radius:16px;padding:30px 26px;margin:6px 0 26px;position:relative;box-shadow:0 16px 44px rgba(232,201,106,.16)}
+.fullpay h2{font-size:1.4rem;margin-bottom:8px}
+.fullpay .lede{color:#d6dbf5;margin-bottom:18px;max-width:640px}
+.fp-grid{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:16px}
+.fp-num{font-family:'Sora';font-size:2rem;font-weight:800;color:#e8c96a}
+.fp-cap{font-size:.85rem;color:#a9b2d8}
+.fp-plus{font-size:1.6rem;color:#7dd3fc;font-weight:700}
+.fp-total{background:rgba(232,201,106,.1);border:1px solid rgba(232,201,106,.4);border-radius:10px;padding:14px 16px;font-size:.95rem}
+.why{background:#10143a;border-radius:14px;padding:26px 24px;margin:0 0 8px}
+.why h2{margin-bottom:12px;font-size:1.2rem}
+.why ul{list-style:none}
+.why li{padding:9px 0 9px 26px;position:relative;font-size:.94rem;color:#d6dbf5}
+.why li:before{content:"●";color:#e8c96a;position:absolute;left:4px}
+.why li b{color:#fff}
 .btn{display:inline-block;font-weight:700;border-radius:10px;padding:15px 30px;font-size:1.02rem;margin:6px;transition:transform .15s;text-decoration:none}
 .btn-call{background:linear-gradient(135deg,#2f9dff,#1668dc);color:#fff;box-shadow:0 8px 22px rgba(47,157,255,.35)}
 .btn:hover{transform:translateY(-2px)}
@@ -75,11 +89,42 @@ footer{padding:26px 0 40px;text-align:center;color:#a9b2d8;font-size:.85rem;bord
 <p style="margin-top:10px"><i>Pick the plan that fits your cash flow. The work is the same either way.</i></p>
 </div>
 
+<div class="fullpay">
+<div class="badge">★ PAY IN FULL — BEST DEAL</div>
+<h2>Own It Outright — $12,500 Today</h2>
+<p class="lede">One payment. You never owe us a dime — no balances, no monthly bills hanging over you, nothing that can ever pause the work.</p>
+<div class="fp-grid">
+<div>
+<div class="fp-num">$12,500</div>
+<div class="fp-cap">at signing — setup paid in full</div>
+</div>
+<div class="fp-plus">+</div>
+<div>
+<div class="fp-num">$9,970<span style="font-size:1rem">/yr</span></div>
+<div class="fp-cap">annual service — two months free, locked forever</div>
+</div>
+</div>
+<div class="fp-total">$22,470 covers your <u>entire first year</u> — setup plus 12 months of service. That's <b>$1,994 less</b> than paying month to month.</div>
+</div>
+
+<div class="why">
+<h2>Why pay in full today</h2>
+<ul>
+<li><b>You never owe anyone a dime.</b> No balances, no payment schedules, nothing hanging over the business. It's yours, outright, from day one.</li>
+<li><b>Two months free, every year, forever.</b> Annual service is $9,970 instead of $11,964 — you keep $1,994 every single year, and the rate is locked. It can never go up on you.</li>
+<li><b>Full speed from day one.</b> No installments to track, no payments that can pause the work. The whole 30-day build runs at full throttle.</li>
+<li><b>One decision, done.</b> $22,470 covers setup plus your entire first year. After that it's a single payment once a year — simpler than twelve bills.</li>
+<li><b>Founder's pricing disappears after this.</b> You're one of the first white-glove clients. This rate never comes back.</li>
+</ul>
+</div>
+
+<h2 style="text-align:center;margin:26px 0 4px">Or split it — same work, same $12,500 setup</h2>
+<p style="text-align:center;color:#a9b2d8;margin-bottom:18px">Smaller payments up front, the balance spread out. The monthly service is $997/mo either way.</p>
+
 <div class="plans">
-<div class="plan best">
-<div class="badge">★ BEST VALUE</div>
-<h2>Plan A — Founder's Rate</h2>
-<div class="tag">The full founder's rate, split across signing and launch.</div>
+<div class="plan">
+<h2>Plan A — Founder's Split</h2>
+<div class="tag">The founder's rate, split across signing and launch.</div>
 <table>
 <tr><td>At signing</td><td>$6,250</td></tr>
 <tr><td>At launch (about 30 days later)</td><td>$6,250</td></tr>
