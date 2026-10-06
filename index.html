@@ -207,6 +207,13 @@ header.nav.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.45)}
 .yt-grid{display:grid;gap:16px}
 .yt-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#0b0e28}
 .yt-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.hero-explainer{max-width:720px;margin:0 auto;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.vid-group-title{font-size:1.25rem;font-weight:700;margin:38px 0 18px;color:var(--gold-soft)}
+.video-lib{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.video-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.video-card video{width:100%;display:block;background:#000;max-height:420px}
+.video-card h4{padding:14px 16px 4px;font-size:1rem}
+.video-card p{padding:0 16px 16px;color:var(--muted);font-size:.9rem}
 .social-cta{margin-top:18px;text-align:center}
 .social-follow{text-align:center;padding:14px 6px}
 .social-follow-icon{width:74px;height:74px;border-radius:50%;background:var(--card-2);border:1px solid rgba(47,157,255,.4);
@@ -354,6 +361,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
       <li><a href="#how">How It Works</a></li>
       <li><a href="#difference">Results</a></li>
       <li><a href="#social">Social</a></li>
+      <li><a href="#videos">Videos</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a class="btn btn-call btn-nav" href="tel:+19899901048">Call 989-990-1048</a></li>
@@ -379,17 +387,21 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
     </div>
     <p class="hero-note">Prefer email? <a href="mailto:contactpremiummarketing@gmail.com">contactpremiummarketing@gmail.com</a> &nbsp;&middot;&nbsp; Mon&ndash;Fri, 9am&ndash;5pm &nbsp;&middot;&nbsp; Davison, MI</p>
     <div class="hero-video reveal">
-      <button class="phone-frame" id="heroVideoBtn" aria-label="Play Jillian's video">
-        <video id="heroVideoPrev" src="videos/jillian-promo.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+      <div class="yt-embed hero-explainer"><iframe src="https://www.youtube.com/embed/Oy3VnmHUXk0" title="Fixing Invisibility — Premium Marketing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+      <p class="hero-video-cap">Watch: how we fix invisibility for local businesses</p>
+    </div>
+    <div class="hero-video reveal">
+      <button class="phone-frame" id="heroVideoBtn" aria-label="Play Jillian's video of the day">
+        <video id="heroVideoPrev" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
         <span class="phone-play" aria-hidden="true"><span>&#9654;</span></span>
       </button>
-      <p class="hero-video-cap">Watch Jillian explain what we do for local businesses</p>
+      <p class="hero-video-cap">Meet Jillian &mdash; new video every day: <strong id="jillianEpLabel">today's episode</strong></p>
     </div>
   </div>
 </section>
 <div class="lightbox" id="videoLightbox" hidden role="dialog" aria-label="Video player">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close video">&times;</button>
-  <video id="lightboxVideo" src="videos/jillian-promo.mp4" controls playsinline preload="none"></video>
+  <video id="lightboxVideo" controls playsinline preload="none"></video>
 </div>
 
 <!-- FUNNEL -->
@@ -619,7 +631,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
     <div class="social-logos reveal">
       <a class="social-logo" href="https://www.facebook.com/profile.php?id=100088345877780" target="_blank" rel="noopener" aria-label="Premium Marketing on Facebook"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" stroke="#7dd3fc" stroke-width="1.6"/><path d="M13.6 20v-6.8h2.3l.35-2.7h-2.65V8.75c0-.78.22-1.31 1.35-1.31h1.4V4.98c-.25-.03-1.08-.11-2.05-.11-2.03 0-3.42 1.24-3.42 3.52v1.96H8.5v2.7h2.3V20h2.8z" fill="#7dd3fc"/></svg></a>
       <a class="social-logo" href="https://www.instagram.com/premium.marketing.llc/" target="_blank" rel="noopener" aria-label="Premium Marketing on Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="#7dd3fc" stroke-width="1.6"/><circle cx="12" cy="12" r="3.8" stroke="#7dd3fc" stroke-width="1.6"/><circle cx="17" cy="7" r="1.4" fill="#7dd3fc"/></svg></a>
-      <a class="social-logo" href="https://www.youtube.com/@PremiumMarketing-i5y" target="_blank" rel="noopener" aria-label="Premium Marketing on YouTube"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12.5" rx="3.5" stroke="#7dd3fc" stroke-width="1.6"/><path d="M10.4 9.6v5.3l4.8-2.65-4.8-2.65z" fill="#7dd3fc"/></svg></a>
+      <a class="social-logo" href="https://www.youtube.com/@PremiumMarketing-e8w" target="_blank" rel="noopener" aria-label="Premium Marketing on YouTube"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12.5" rx="3.5" stroke="#7dd3fc" stroke-width="1.6"/><path d="M10.4 9.6v5.3l4.8-2.65-4.8-2.65z" fill="#7dd3fc"/></svg></a>
       <a class="social-logo" href="https://www.linkedin.com/in/william-aldred-97612a28/" target="_blank" rel="noopener" aria-label="Premium Marketing on LinkedIn"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4" stroke="#7dd3fc" stroke-width="1.6"/><text x="12" y="16.6" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.5" font-weight="800" fill="#7dd3fc">in</text></svg></a>
     </div>
     <div class="social-grid">
@@ -633,7 +645,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
           <div class="yt-embed"><iframe src="https://www.youtube.com/embed/5s-NJYvNr9s" title="Premium Marketing video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
           <div class="yt-embed"><iframe src="https://www.youtube.com/embed/IuJRLwAJ_r0" title="Premium Marketing video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
         </div>
-        <div class="social-cta"><a class="btn btn-ghost" href="https://www.youtube.com/@PremiumMarketing-i5y" target="_blank" rel="noopener">Subscribe on YouTube</a></div>
+        <div class="social-cta"><a class="btn btn-ghost" href="https://www.youtube.com/@PremiumMarketing-e8w" target="_blank" rel="noopener">Subscribe on YouTube</a></div>
       </div>
       <div class="social-card reveal">
         <h3>Instagram</h3>
@@ -656,6 +668,64 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="videos">
+  <div class="wrap">
+    <span class="eyebrow reveal">Watch</span>
+    <h2 class="sec-title reveal">Videos that <span class="grad-text">grow businesses.</span></h2>
+    <p class="sec-sub reveal">Explainers that teach, and a new Jillian episode every day.</p>
+    <h3 class="vid-group-title reveal">Explainers</h3>
+    <div class="video-lib">
+      <div class="video-card reveal">
+        <div class="yt-embed"><iframe src="https://www.youtube.com/embed/Oy3VnmHUXk0" title="Fixing Invisibility — Premium Marketing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <h4>Fixing Invisibility</h4>
+        <p>How we fix invisibility for local businesses.</p>
+      </div>
+      <div class="video-card reveal">
+        <div class="yt-embed"><iframe src="https://www.youtube.com/embed/0HZqhv7_WL4" title="How Premium Marketing Turns Your Marketing Into Measurable Revenue" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <h4>Marketing Into Measurable Revenue</h4>
+        <p>The playbook big companies use — for your local business.</p>
+      </div>
+      <div class="video-card reveal">
+        <div class="yt-embed"><iframe src="https://www.youtube.com/embed/mfxynQ1VSb8" title="How Custom Apps Drive Repeat Business" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <h4>How Custom Apps Drive Repeat Business</h4>
+      </div>
+      <div class="video-card reveal">
+        <div class="yt-embed"><iframe src="https://www.youtube.com/embed/nva_YLiMgiU" title="How Tracked Landing Pages Work" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <h4>How Tracked Landing Pages Work</h4>
+      </div>
+      <div class="video-card reveal">
+        <div class="yt-embed"><iframe src="https://www.youtube.com/embed/VKwgXy3gbaE" title="How Forge Automates Your Local Business Marketing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <h4>How Forge Automates Your Marketing</h4>
+      </div>
+    </div>
+    <h3 class="vid-group-title reveal">Jillian — new episode daily</h3>
+    <div class="video-lib">
+      <div class="video-card reveal">
+        <video src="videos/jillian-promo.mp4" controls playsinline preload="metadata"></video>
+        <h4>Meet Jillian</h4>
+      </div>
+      <div class="video-card reveal">
+        <video src="videos/jillian-promo-10s.mp4" controls playsinline preload="metadata"></video>
+        <h4>Jillian in 10 Seconds</h4>
+      </div>
+      <div class="video-card reveal">
+        <video src="videos/jillian-ep3.mp4" controls playsinline preload="metadata"></video>
+        <h4>Episode 3 — Know Where Customers Come From</h4>
+      </div>
+      <div class="video-card reveal">
+        <video src="videos/jillian-ep4.mp4" controls playsinline preload="metadata"></video>
+        <h4>Episode 4 — Your Reviews Talk First</h4>
+      </div>
+      <div class="video-card reveal">
+        <video src="videos/jillian-ep9.mp4" controls playsinline preload="metadata"></video>
+        <h4>Episode 9 — Past Customers Never Heard Back</h4>
+      </div>
+    </div>
+    <div class="social-cta reveal"><a class="btn btn-ghost" href="https://www.youtube.com/@PremiumMarketing-e8w" target="_blank" rel="noopener">All videos on YouTube</a></div>
   </div>
 </section>
 <section id="about">
@@ -738,6 +808,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
         <li><a href="#how">How It Works</a></li>
         <li><a href="#difference">Results</a></li>
       <li><a href="#social">Social</a></li>
+      <li><a href="#videos">Videos</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="tel:+19899901048">989-990-1048</a></li>
@@ -944,6 +1015,26 @@ document.getElementById('audit-form').addEventListener('submit', e => {
     }
     syncBtn();
   });
+})();
+
+/* ---------- Jillian daily video rotation ---------- */
+(function(){
+  var vids=[
+    {src:"videos/jillian-promo.mp4",    label:"Meet Jillian"},
+    {src:"videos/jillian-promo-10s.mp4",label:"Jillian in 10 seconds"},
+    {src:"videos/jillian-ep3.mp4",      label:"Episode 3 — where customers come from"},
+    {src:"videos/jillian-ep4.mp4",      label:"Episode 4 — your reviews talk first"},
+    {src:"videos/jillian-ep9.mp4",      label:"Episode 9 — past customers never heard back"}
+  ];
+  // Add new Jillian videos to the list above — rotation picks them up automatically.
+  var today=Math.floor(Date.now()/86400000),
+      pick=vids[today%vids.length],
+      prev=document.getElementById('heroVideoPrev'),
+      lbv=document.getElementById('lightboxVideo'),
+      cap=document.getElementById('jillianEpLabel');
+  if(prev) prev.src=pick.src;
+  if(lbv) lbv.src=pick.src;
+  if(cap) cap.textContent=pick.label;
 })();
 
 /* ---------- Hero feature video lightbox ---------- */
