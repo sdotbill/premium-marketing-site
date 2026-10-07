@@ -97,7 +97,9 @@
     <h2>Agreement Signed</h2>
     <div class="sig-final" id="sigFinal"></div>
     <p id="signedMeta"></p>
-    <p style="margin-top:16px;"><strong>What's next:</strong> Bill will reach out with payment details. As soon as payment clears, your lead lists are on their way.</p>
+    <p style="margin-top:16px;"><strong>What's next:</strong> Tap below to let Bill know you've signed. He'll send payment details right away.</p>
+    <a id="smsBtn" href="#" style="display:inline-block;background:linear-gradient(135deg,#2E9BC6,#1F4E79);color:#fff;font-size:18px;font-weight:800;padding:16px 36px;border-radius:12px;text-decoration:none;margin-top:12px;box-shadow:0 4px 16px rgba(46,155,198,0.35);">📱 Text Bill — I've Signed</a>
+    <p style="margin-top:12px;font-size:13px;color:#888;">As soon as payment clears, your lead lists are on their way.</p>
     <p style="margin-top:12px;">Questions? Call Bill: <a href="tel:+19899901048" style="color:#1F4E79;font-weight:700;">(989) 990-1048</a></p>
   </div>
   <div class="fine">Premium Marketing Solutions · 8253 Meadowwood Dr, Davison, MI 48423</div>
@@ -136,8 +138,9 @@ function doSign() {
   document.getElementById('formwrap').style.display = 'none';
   document.getElementById('donebox').style.display = 'block';
   window.scrollTo(0, 0);
-  // Notify Bill via SMS-ready message
-  var msg = 'SANTOS SIGNED: ' + name + ' signed the SG Outdoor Solutions $2,000 agreement at ' + stamp + ' ET. Send payment link.';
+  // Notify Bill via SMS — pre-fill a text message to Bill's number
+  var msg = 'SANTOS SIGNED: ' + name + ' signed the SG Outdoor Solutions $2,000 agreement at ' + stamp + ' ET.';
+  document.getElementById('smsBtn').href = 'sms:+19899901048?&body=' + encodeURIComponent(msg);
   document.title = '✓ Signed — ' + name;
 }
 </script>
