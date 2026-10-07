@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Sign Agreement — Premium Marketing</title>
+<title>Sign Agreement — Premium Marketing Solutions</title>
 <style>
   :root { --navy:#0f2a44; --cyan:#00bcd4; --ink:#1a1a1a; --gray:#5a6b7c; --line:#e2e8f0; --bg:#f7fafc; }
   * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
@@ -33,6 +33,7 @@
   .consent span { font-size:14px; }
   .btn { display:block; width:100%; padding:17px; font-size:18px; font-weight:800; color:#fff; background:var(--cyan); border:none; border-radius:12px; cursor:pointer; }
   .btn:active { transform:scale(.98); }
+  .btn:disabled { background:#a0aec0; }
   .err { color:#c53030; font-size:13px; margin-top:8px; display:none; }
   .questions { text-align:center; margin-top:18px; font-size:14px; color:var(--gray); }
   .questions a { color:var(--cyan); font-weight:700; text-decoration:none; }
@@ -49,39 +50,60 @@
   <div class="sub">Marketing &amp; Social Media Management — Davison, Michigan</div>
 </div>
 <div class="wrap">
+
   <div class="card" id="main">
     <h1>Service Agreement</h1>
     <p class="lede">Please read the agreement below, then type your full legal name and tap <b>Sign Agreement</b>. Your typed name, consent check, and timestamp are your electronic signature.</p>
     <div id="dealbox"></div>
   </div>
+
   <div class="card agreement" id="agreement"></div>
-  <div class="entity-note"><b>Note:</b> Premium Marketing LLC's Michigan organization filing is in progress. This agreement will be countersigned under the completed entity — your terms, pricing, and start date do not change.</div>
+
+  <div class="entity-note">
+    <b>Note:</b> Premium Marketing Solutions LLC's Michigan organization filing is in progress — your terms, pricing, and start date do not change.
+  </div>
+
   <div class="card" id="signbox">
     <label class="f" for="signerName">Full legal name (typed signature)</label>
     <input type="text" id="signerName" placeholder="Type your full name" autocomplete="name">
-    <div class="consent"><input type="checkbox" id="consent"><span>I have read the agreement above and agree to its terms.</span></div>
+    <div class="consent">
+      <input type="checkbox" id="consent">
+      <span>I have read the agreement above and agree to its terms.</span>
+    </div>
     <button class="btn" id="signBtn" onclick="doSign()">Sign Agreement</button>
     <div class="err" id="err">Please type your full name and check the consent box.</div>
     <div class="questions">Questions before signing? Call <a href="tel:+19899901048">(989) 990-1048</a></div>
   </div>
+
   <div class="card done" id="donebox" style="display:none">
     <div class="check">✓</div>
     <h2>Almost done</h2>
-    <p class="lede">Your mail app should have opened with your signed agreement ready to send.<br><b>Tap Send</b> in your mail app to deliver your signature to Premium Marketing.</p>
-    <p class="lede" style="margin-top:12px">Bill will countersign and text your payment link right after.</p>
+    <p class="lede">Your mail app should have opened with your signed agreement ready to send.<br><b>Tap Send</b> in your mail app to deliver your signature to Premium Marketing Solutions.</p>
+    <p class="lede" style="margin-top:12px">Bill will text your payment link right after.</p>
   </div>
+
   <div class="card" id="incomplete">
     <h1>Link incomplete</h1>
-    <p class="lede">This signing link is missing its details. Please contact Premium Marketing at <a href="tel:+19899901048">(989) 990-1048</a> for a fresh link.</p>
+    <p class="lede">This signing link is missing its details. Please contact Premium Marketing Solutions at <a href="tel:+19899901048">(989) 990-1048</a> for a fresh link.</p>
   </div>
-  <div class="fineprint">Premium Marketing · 8253 Meadowwood Dr, Davison, MI 48423 · contactpremiummarketing@gmail.com</div>
+
+  <div class="fineprint">Premium Marketing Solutions · 8253 Meadowwood Dr, Davison, MI 48423 · contactpremiummarketing@gmail.com</div>
 </div>
+
 <script>
 const q = new URLSearchParams(location.search);
-const P = { token: q.get('t') || '', client: q.get('c') || '', contact: q.get('n') || '', monthly: q.get('m') || '997', setup: q.get('s') || '12500', due: q.get('d') || '6250', email: q.get('e') || '', phone: q.get('p') || '' };
+const P = {
+  token:   q.get('t') || '',
+  client:  q.get('c') || '',
+  contact: q.get('n') || '',
+  monthly: q.get('m') || '997',
+  setup:   q.get('s') || '12500',
+  due:     q.get('d') || '6250',
+  email:   q.get('e') || '',
+  phone:   q.get('p') || ''
+};
 const money = n => '$' + Number(n).toLocaleString('en-US');
-function row(k, v) { return '<div class="deal-line"><span class="k">' + k + '</span><span class="v">' + v + '</span></div>'; }
-function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
 if (!P.token || !P.client) {
   document.getElementById('main').style.display = 'none';
   document.getElementById('agreement').style.display = 'none';
@@ -89,25 +111,53 @@ if (!P.token || !P.client) {
   document.getElementById('incomplete').style.display = 'block';
 } else {
   const today = new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
-  document.getElementById('dealbox').innerHTML = row('Client', esc(P.client)) + (P.contact ? row('Signed by', esc(P.contact)) : '') + row('Program', 'White-Glove (Founder\u2019s Rate)') + row('Setup fee', money(P.setup)) + row('Due at signing', money(P.due)) + row('Monthly', money(P.monthly) + '/mo, locked') + row('Date', today);
-  document.getElementById('agreement').innerHTML =
-    '<h3>PREMIUM MARKETING — CLIENT SERVICE AGREEMENT (WHITE-GLOVE)</h3>' +
-    '<p>This Client Service Agreement ("Agreement") is entered into on ' + today + ', by and between <b>Premium Marketing LLC</b>, a Michigan limited liability company (filing in progress), located at 8253 Meadowwood Dr, Davison, MI 48423 ("Provider"), and <b>' + esc(P.client) + '</b>' + (P.contact ? ', contact: <b>' + esc(P.contact) + '</b>' : '') + ' ("Client").</p>' +
-    '<h3>1. Services — White-Glove Program</h3><p>Provider will deliver: website and public-presence rebuild; Google Business and listing cleanup with NAP consistency; Facebook and Instagram setup and content; AI spokesperson content; review engine; Forge follow-up system; recruiting engine including weekly recruiting content and job-ad support; estimate and follow-up notifications; lead and comment monitoring; and ongoing management.</p>' +
-    '<h3>2. Term</h3><p>Month-to-month beginning at launch, until terminated under Section 5.</p>' +
-    '<h3>3. Payment</h3><p>(a) Setup fee: <b>' + money(P.setup) + '</b> — <b>' + money(P.due) + '</b> due upon signing to begin work; the remaining balance due at launch (approximately 30 days later).<br>(b) Monthly fee: <b>' + money(P.monthly) + ' per month, locked</b>, billed in advance starting at launch. Annual option: <b>$9,970</b> (two months free).<br>(c) Client pays securely online via PayPal payment link. Provider never collects, sees, or stores card information.<br>(d) Accounts more than 15 days past due may have services paused until current.</p>' +
-    '<h3>4. Relationship</h3><p>Provider is an independent vendor. Nothing here creates a partnership, joint venture, employment, or revenue-sharing relationship.</p>' +
-    '<h3>5. Cancellation</h3><p>Either party may cancel with thirty (30) days\' written notice (email is sufficient). Monthly fees already paid are non-refundable. Setup fees are non-refundable once build work has begun.</p>' +
-    '<h3>6. Ownership</h3><p>Client owns its website, profiles, content created for Client, customer data, and credentials. Provider retains the Forge platform, templates, and internal processes, licensed to Client while the Agreement is active.</p>' +
-    '<h3>7. Client responsibilities</h3><p>Client provides timely access, information, and approvals reasonably needed, including logins, brand assets, and feedback within five (5) business days.</p>' +
-    '<h3>8. Confidentiality</h3><p>Each party keeps the other\'s non-public business information confidential.</p>' +
-    '<h3>9. Limitation of liability</h3><p>Provider\'s total liability shall not exceed fees paid in the three (3) months preceding the claim. No specific marketing results, rankings, or revenue outcomes are guaranteed.</p>' +
-    '<h3>10. Governing law</h3><p>The laws of the State of Michigan.</p>' +
-    '<h3>11. Entire agreement</h3><p>This document is the entire agreement regarding the Services. Amendments must be in writing and signed by both parties.</p>' +
-    '<h3>Agreed and accepted</h3><p>Premium Marketing LLC — <i>countersignature to follow</i><br>Bill Aldred, Founder</p>' +
-    '<p>Client: <b>' + esc(P.client) + '</b> — <i>sign below</i></p>';
+  document.getElementById('dealbox').innerHTML =
+    row('Client', esc(P.client)) +
+    (P.contact ? row('Signed by', esc(P.contact)) : '') +
+    row('Program', 'White-Glove (Founder\u2019s Rate)') +
+    row('Setup fee', money(P.setup)) +
+    row('Due at signing', money(P.due)) +
+    row('Monthly', money(P.monthly) + '/mo, locked') +
+    row('Date', today);
+
+  document.getElementById('agreement').innerHTML = `
+    <h3>PREMIUM MARKETING — CLIENT SERVICE AGREEMENT (WHITE-GLOVE)</h3>
+    <p>This Client Service Agreement ("Agreement") is entered into on ${today}, by and between <b>Premium Marketing Solutions LLC</b>, a Michigan limited liability company (filing in progress), located at 8253 Meadowwood Dr, Davison, MI 48423 ("Provider"), and <b>${esc(P.client)}</b>${P.contact ? `, contact: <b>${esc(P.contact)}</b>` : ''} ("Client").</p>
+    <h3>1. Services — White-Glove Program</h3>
+    <p>Provider will deliver: website and public-presence rebuild; Google Business and listing cleanup with NAP consistency; Facebook and Instagram setup and content; AI spokesperson content; review engine; Forge follow-up system; recruiting engine including weekly recruiting content and job-ad support; estimate and follow-up notifications; lead and comment monitoring; and ongoing management.</p>
+    <h3>2. Term</h3>
+    <p>Month-to-month beginning at launch, until terminated under Section 5.</p>
+    <h3>3. Payment</h3>
+    <p>(a) Setup fee: <b>${money(P.setup)}</b> — <b>${money(P.due)}</b> due upon signing to begin work; the remaining balance due at launch (approximately 30 days later).<br>
+    (b) Monthly fee: <b>${money(P.monthly)} per month, locked</b>, billed in advance starting at launch. Annual option: <b>$9,970</b> (two months free).<br>
+    (c) Client pays securely online via PayPal payment link. Provider never collects, sees, or stores card information.<br>
+    (d) Accounts more than 15 days past due may have services paused until current.</p>
+    <h3>4. Relationship</h3>
+    <p>Provider is an independent vendor. Nothing here creates a partnership, joint venture, employment, or revenue-sharing relationship.</p>
+    <h3>5. Cancellation</h3>
+    <p>Either party may cancel with thirty (30) days' written notice (email is sufficient). Monthly fees already paid are non-refundable. Setup fees are non-refundable once build work has begun.</p>
+    <h3>6. Ownership</h3>
+    <p>Client owns its website, profiles, content created for Client, customer data, and credentials. Provider retains the Forge platform, templates, and internal processes, licensed to Client while the Agreement is active.</p>
+    <h3>7. Client responsibilities</h3>
+    <p>Client provides timely access, information, and approvals reasonably needed, including logins, brand assets, and feedback within five (5) business days.</p>
+    <h3>8. Confidentiality</h3>
+    <p>Each party keeps the other's non-public business information confidential.</p>
+    <h3>9. Limitation of liability</h3>
+    <p>Provider's total liability shall not exceed fees paid in the three (3) months preceding the claim. No specific marketing results, rankings, or revenue outcomes are guaranteed.</p>
+    <h3>10. Governing law</h3>
+    <p>The laws of the State of Michigan.</p>
+    <h3>11. Entire agreement</h3>
+    <p>This document is the entire agreement regarding the Services. Amendments must be in writing and signed by both parties.</p>
+    <h3>Agreed and accepted</h3>
+
+    <p>Client: <b>${esc(P.client)}</b> — <i>sign below</i></p>`;
+
   if (P.contact) document.getElementById('signerName').value = P.contact;
 }
+
+function row(k, v) { return `<div class="deal-line"><span class="k">${k}</span><span class="v">${v}</span></div>`; }
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
 function doSign() {
   const name = document.getElementById('signerName').value.trim();
   const ok = document.getElementById('consent').checked;
@@ -115,8 +165,16 @@ function doSign() {
   if (!name || !ok) { err.style.display = 'block'; return; }
   err.style.display = 'none';
   const ts = new Date().toISOString();
-  const subject = 'SIGNED: ' + P.token + ' — ' + name;
-  const body = 'PREMIUM MARKETING — ELECTRONIC SIGNATURE RECORD\nSigning token: ' + P.token + '\nBusiness: ' + P.client + '\nSigner typed name: ' + name + '\nConsent: "I have read the agreement and agree to its terms" — CHECKED\nProgram: White-Glove Founder\'s Rate — ' + money(P.monthly) + '/mo, ' + money(P.setup) + ' setup, ' + money(P.due) + ' due at signing\nTimestamp: ' + ts + '\nContact on file: ' + (P.contact || '-') + ' | ' + (P.email || '-') + ' | ' + (P.phone || '-');
+  const subject = `SIGNED: ${P.token} — ${name}`;
+  const body =
+`PREMIUM MARKETING — ELECTRONIC SIGNATURE RECORD
+Signing token: ${P.token}
+Business: ${P.client}
+Signer typed name: ${name}
+Consent: "I have read the agreement and agree to its terms" — CHECKED
+Program: White-Glove Founder's Rate — ${money(P.monthly)}/mo, ${money(P.setup)} setup, ${money(P.due)} due at signing
+Timestamp: ${ts}
+Contact on file: ${P.contact || '-'} | ${P.email || '-'} | ${P.phone || '-'}`;
   location.href = 'mailto:contactpremiummarketing@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   document.getElementById('main').style.display = 'none';
   document.getElementById('agreement').style.display = 'none';
