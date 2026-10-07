@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Sign Agreement — S.G. Outdoor Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f4f8fb; color: #1c1c1c; line-height: 1.6; }
+  .topbar { background: linear-gradient(135deg, #0f2e4d, #1F4E79); color: #fff; padding: 20px; text-align: center; }
+  .topbar .brand { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.85; margin-bottom: 6px; }
+  .topbar h1 { font-size: 22px; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 20px 16px 50px; }
+  .card { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 12px rgba(31,78,121,0.08); }
+  .card h2 { color: #1F4E79; font-size: 18px; margin-bottom: 10px; }
+  .card p { font-size: 14.5px; margin-bottom: 8px; }
+  .deal-line { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #edf2f7; font-size: 15px; }
+  .deal-line:last-child { border-bottom: none; }
+  .deal-line .k { color: #666; }
+  .deal-line .v { font-weight: 700; color: #1F4E79; text-align: right; }
+  label.f { display: block; font-weight: 700; font-size: 15px; color: #1F4E79; margin: 18px 0 8px; }
+  input[type=text] { width: 100%; padding: 16px; font-size: 18px; border: 2px solid #e2e8f0; border-radius: 10px; }
+  input[type=text]:focus { border-color: #2E9BC6; outline: none; }
+  .sig-preview { margin-top: 16px; padding: 24px 16px; background: #fafbfd; border: 2px dashed #cbd5e0; border-radius: 10px; text-align: center; min-height: 110px; display: flex; align-items: center; justify-content: center; }
+  .sig-preview .sig { font-family: 'Great Vibes', cursive; font-size: 48px; color: #1a365d; line-height: 1.2; }
+  .sig-preview .placeholder { color: #a0aec0; font-size: 15px; font-style: italic; }
+  .sig-label { text-align: center; font-size: 12px; color: #888; margin-top: 6px; letter-spacing: 1px; text-transform: uppercase; }
+  .consent { display: flex; gap: 12px; align-items: flex-start; margin: 20px 0; padding: 16px; background: #f0f9ff; border-radius: 10px; }
+  .consent input { width: 28px; height: 28px; margin-top: 2px; flex-shrink: 0; accent-color: #2E9BC6; }
+  .consent span { font-size: 14.5px; }
+  .btn { display: block; width: 100%; padding: 18px; font-size: 19px; font-weight: 800; color: #fff; background: linear-gradient(135deg, #27ae60, #1e8449); border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 16px rgba(39,174,96,0.35); }
+  .btn:active { transform: scale(0.98); }
+  .btn:disabled { background: #a0aec0; box-shadow: none; }
+  .err { color: #c0392b; font-size: 14px; margin-top: 10px; display: none; text-align: center; }
+  .done { text-align: center; padding: 40px 20px; display: none; }
+  .done .check { font-size: 64px; color: #27ae60; }
+  .done h2 { color: #1F4E79; font-size: 22px; margin: 12px 0 8px; }
+  .done .sig-final { font-family: 'Great Vibes', cursive; font-size: 56px; color: #1a365d; margin: 16px 0 4px; }
+  .done p { color: #555; font-size: 15px; }
+  .fine { font-size: 12px; color: #999; text-align: center; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Premium Marketing Solutions</div>
+  <h1>Lead Generation Agreement</h1>
+</div>
+
+<div class="wrap" id="formwrap">
+
+  <div class="card">
+    <h2>Your Package</h2>
+    <div class="deal-line"><span class="k">Client</span><span class="v">S.G. Outdoor Solutions LLC</span></div>
+    <div class="deal-line"><span class="k">Initial package</span><span class="v">$2,000 one-time</span></div>
+    <div class="deal-line"><span class="k">Leads included</span><span class="v">100 qualified + bonus surge list</span></div>
+    <div class="deal-line"><span class="k">Ongoing (optional)</span><span class="v">$997/mo — 100 leads/mo</span></div>
+    <div class="deal-line"><span class="k">Term</span><span class="v">Month-to-month, cancel anytime</span></div>
+    <div class="deal-line"><span class="k">Date</span><span class="v" id="today"></span></div>
+  </div>
+
+  <div class="card">
+    <h2>Agreement Terms</h2>
+    <p><strong>1. Initial Package ($2,000):</strong> Upon signing and payment, Client receives 100 qualified homeowner leads in the Hurricane Isaias impact zone, plus a bonus surge-zone lead list at no charge.</p>
+    <p><strong>2. Ongoing Service ($997/month, optional):</strong> 100 qualified homeowner leads per month in Client's home service area (Seminole/Volusia Counties). Strictly month-to-month — cancel anytime, no fee.</p>
+    <p><strong>3. Lead Guarantee:</strong> Every lead includes homeowner name, complete dialable phone, property address, and qualification notes. Disconnected or wrong numbers replaced free.</p>
+    <p><strong>4. Exclusivity:</strong> Provider will not sell or share leads with competing outdoor-service, tree-removal, or storm-cleanup companies in Client's active region while Client is active.</p>
+    <p><strong>5. Delivery & Payment:</strong> Payment due upon signing. Lead lists delivered as downloadable spreadsheets after confirmed payment.</p>
+  </div>
+
+  <div class="card">
+    <h2>Sign Below</h2>
+    <p style="color:#666;font-size:14px;">Type your full legal name — watch it become your signature.</p>
+    <label class="f" for="signerName">Full legal name</label>
+    <input type="text" id="signerName" placeholder="Type your full name" autocomplete="name" oninput="updateSig()">
+    <div class="sig-preview" id="sigPreview">
+      <span class="placeholder" id="sigPlaceholder">Your signature will appear here</span>
+      <span class="sig" id="sigRender" style="display:none"></span>
+    </div>
+    <div class="sig-label">Electronic Signature</div>
+
+    <div class="consent">
+      <input type="checkbox" id="consent">
+      <span>I have read the agreement above and agree to its terms. I understand my typed name below constitutes my electronic signature.</span>
+    </div>
+    <button class="btn" id="signBtn" onclick="doSign()">Sign Agreement</button>
+    <div class="err" id="err">Please type your full name and check the consent box.</div>
+  </div>
+
+</div>
+
+<div class="wrap">
+  <div class="card done" id="donebox">
+    <div class="check">✓</div>
+    <h2>Agreement Signed</h2>
+    <div class="sig-final" id="sigFinal"></div>
+    <p id="signedMeta"></p>
+    <p style="margin-top:16px;"><strong>What's next:</strong> Bill will send your payment link. As soon as payment clears, your lead lists are on their way.</p>
+    <p style="margin-top:12px;">Questions? Call Bill: <a href="tel:+19899901048" style="color:#1F4E79;font-weight:700;">(989) 990-1048</a></p>
+  </div>
+  <div class="fine">Premium Marketing Solutions · 8253 Meadowwood Dr, Davison, MI 48423</div>
+</div>
+
+<script>
+document.getElementById('today').textContent = new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+
+function updateSig() {
+  var name = document.getElementById('signerName').value.trim();
+  var render = document.getElementById('sigRender');
+  var ph = document.getElementById('sigPlaceholder');
+  if (name.length > 0) {
+    render.textContent = name;
+    render.style.display = 'inline';
+    ph.style.display = 'none';
+  } else {
+    render.style.display = 'none';
+    ph.style.display = 'inline';
+  }
+}
+
+function doSign() {
+  var name = document.getElementById('signerName').value.trim();
+  var consent = document.getElementById('consent').checked;
+  var err = document.getElementById('err');
+  if (name.length < 3 || !consent) {
+    err.style.display = 'block';
+    return;
+  }
+  err.style.display = 'none';
+  var now = new Date();
+  var stamp = now.toLocaleString('en-US', {year:'numeric', month:'long', day:'numeric', hour:'numeric', minute:'2-digit'});
+  document.getElementById('sigFinal').textContent = name;
+  document.getElementById('signedMeta').innerHTML = 'Signed by <strong>' + name + '</strong><br>' + stamp + ' ET';
+  document.getElementById('formwrap').style.display = 'none';
+  document.getElementById('donebox').style.display = 'block';
+  window.scrollTo(0, 0);
+  // Notify Bill via SMS-ready message
+  var msg = 'SANTOS SIGNED: ' + name + ' signed the SG Outdoor Solutions $2,000 agreement at ' + stamp + ' ET. Send payment link.';
+  document.title = '✓ Signed — ' + name;
+}
+</script>
+
+</body>
+</html>
