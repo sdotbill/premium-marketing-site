@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S.G. Outdoor Solutions — Your Lead Package</title>
+<meta property="og:title" content="Your Lead Package — S.G. Outdoor Solutions">
+<meta property="og:description" content="162 qualified homeowner leads. Ranked, verified, tap-to-call. $2,000 one-time.">
+<meta property="og:image" content="https://sdotbill.github.io/premium-marketing-site/logo.png">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #222; line-height: 1.6; background: #f4f8fb; }
+  .hero { background: linear-gradient(135deg, #0f2e4d 0%, #1F4E79 50%, #2E9BC6 100%); color: #fff; padding: 44px 24px 32px; text-align: center; }
+  .hero .brand { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.85; margin-bottom: 10px; }
+  .hero h1 { font-size: 29px; margin-bottom: 6px; }
+  .hero p { font-size: 15px; opacity: 0.9; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 50px; }
+  .section-label { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #2E9BC6; font-weight: 700; margin: 28px 0 12px; text-align: center; }
+
+  /* Lead counts */
+  .vs { display: flex; gap: 12px; margin-bottom: 14px; }
+  .vs .col { flex: 1; border-radius: 14px; padding: 20px 12px; text-align: center; }
+  .vs .landfall { background: #e6f4fa; border: 2px solid #2E9BC6; }
+  .vs .surge { background: #fef9e7; border: 2px solid #D4A017; }
+  .vs .col .n { font-size: 44px; font-weight: 800; line-height: 1; }
+  .vs .landfall .n { color: #1F4E79; }
+  .vs .surge .n { color: #B8860B; }
+  .vs .col .t { font-size: 13.5px; font-weight: 700; margin-top: 6px; }
+  .vs .col .d { font-size: 12.5px; color: #555; margin-top: 4px; }
+
+  /* Download buttons */
+  .dl { display: block; color: #fff; font-size: 18px; font-weight: 700; padding: 18px 20px; border-radius: 12px; text-decoration: none; margin-bottom: 12px; text-align: center; }
+  .dl.landfall { background: linear-gradient(135deg, #2E9BC6, #1F4E79); box-shadow: 0 4px 16px rgba(46,155,198,0.35); }
+  .dl.surge { background: linear-gradient(135deg, #D4A017, #B8860B); box-shadow: 0 4px 16px rgba(212,160,23,0.3); }
+  .dl:active { transform: scale(0.98); }
+  .dl-note { text-align: center; color: #666; font-size: 13.5px; margin-bottom: 8px; }
+
+  /* Cards */
+  .card { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 12px rgba(31,78,121,0.08); }
+  .card h2 { color: #1F4E79; font-size: 19px; margin-bottom: 12px; }
+  .card p { margin-bottom: 10px; font-size: 15px; }
+  .card ul { list-style: none; margin: 8px 0; }
+  .card ul li { padding: 6px 0 6px 28px; position: relative; font-size: 15px; }
+  .card ul li::before { content: "✓"; position: absolute; left: 4px; color: #2E9BC6; font-weight: bold; font-size: 17px; }
+
+  /* Quality bars */
+  .bar-row { margin-bottom: 12px; }
+  .bar-row .top { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 4px; }
+  .bar-row .top strong { color: #1F4E79; }
+  .bar { height: 14px; background: #e2e8f0; border-radius: 7px; overflow: hidden; }
+  .bar .fill { height: 100%; border-radius: 7px; background: linear-gradient(90deg, #2E9BC6, #1F4E79); }
+  .bar .fill.gold { background: linear-gradient(90deg, #D4A017, #B8860B); }
+
+  /* Scoring grid */
+  .score-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+  .score-box { background: #f7fafc; border-radius: 10px; padding: 14px; text-align: center; }
+  .score-box .pts { font-size: 26px; font-weight: 800; color: #2E9BC6; }
+  .score-box .what { font-size: 12.5px; color: #444; margin-top: 4px; }
+
+  /* Tiers */
+  .tier { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #edf2f7; }
+  .tier:last-child { border-bottom: none; }
+  .tier .dot { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; }
+  .tier .info { font-size: 14px; }
+  .tier .info strong { display: block; font-size: 15px; }
+
+  /* Pricing */
+  .price-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .price-table th { background: #1F4E79; color: #fff; text-align: left; padding: 12px; font-size: 14px; }
+  .price-table td { padding: 14px 12px; border-bottom: 1px solid #e2e8f0; font-size: 15px; vertical-align: top; }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price { font-weight: 800; color: #1F4E79; font-size: 18px; white-space: nowrap; }
+  .tag { display: inline-block; background: #e6f4fa; color: #1F4E79; font-size: 12.5px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 6px; }
+  .guarantee { border-left: 4px solid #2E9BC6; }
+  .fine { font-size: 13px; color: #777; }
+  .cta { text-align: center; padding: 32px 20px 20px; }
+  .cta a.call { display: inline-block; background: #2E9BC6; color: #fff; font-size: 19px; font-weight: 700; padding: 16px 44px; border-radius: 10px; text-decoration: none; box-shadow: 0 4px 16px rgba(46,155,198,0.35); }
+  .cta p { margin-top: 12px; color: #666; font-size: 14px; }
+  .sig-block { margin-top: 16px; padding-top: 16px; border-top: 1px dashed #ccc; }
+  .sig-line { margin: 22px 0 4px; font-size: 15px; }
+  .footer { text-align: center; padding: 24px; color: #888; font-size: 13px; }
+  @media (max-width: 560px) { .hero h1 { font-size: 24px; } .card { padding: 20px; } .vs .col .n { font-size: 36px; } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="brand">Premium Marketing Solutions</div>
+  <h1>Your Lead Package</h1>
+  <p>Prepared for S.G. Outdoor Solutions LLC &nbsp;·&nbsp; October 7, 2026</p>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ SECTION 1: THE LEADS ============ -->
+  <div class="section-label">📊 The Leads — By the Numbers</div>
+
+  <div class="vs">
+    <div class="col landfall">
+      <div class="n">85</div>
+      <div class="t">🌊 LANDFALL LIST</div>
+      <div class="d">Florida Panhandle<br>Direct storm path<br>Pensacola → Destin</div>
+    </div>
+    <div class="col surge">
+      <div class="n">77</div>
+      <div class="t">⚡ SURGE LIST</div>
+      <div class="d">Mississippi Gulf Coast<br>Storm surge zone<br><em>Free bonus</em></div>
+    </div>
+  </div>
+
+  <a class="dl landfall" href="https://sdotbill.github.io/premium-marketing-site/landfall-list.xlsx">📥 Download Landfall List (Excel)</a>
+  <a class="dl surge" href="https://sdotbill.github.io/premium-marketing-site/surge-list.xlsx">📥 Download Surge List — Bonus (Excel)</a>
+  <p class="dl-note">Tap a button to download. Opens in Google Sheets or Excel.<br>Every phone number is tap-to-call.</p>
+
+  <div class="card">
+    <h2>Lead Quality Breakdown</h2>
+    <div class="bar-row">
+      <div class="top"><span>Verified phone numbers</span><strong>16</strong></div>
+      <div class="bar"><div class="fill" style="width:19%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>High-confidence numbers</span><strong>38</strong></div>
+      <div class="bar"><div class="fill" style="width:45%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>$1M+ homes</span><strong>51</strong></div>
+      <div class="bar"><div class="fill gold" style="width:60%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>$500K+ homes</span><strong>56</strong></div>
+      <div class="bar"><div class="fill gold" style="width:66%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>Direct waterfront</span><strong>89</strong></div>
+      <div class="bar"><div class="fill" style="width:100%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top"><span>Owner-occupied</span><strong>71</strong></div>
+      <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎯 How Every Lead Is Scored</h2>
+    <p style="font-size:14px;color:#555;">Each lead gets a score. Higher score = call first.</p>
+    <div class="score-grid">
+      <div class="score-box"><div class="pts">+30</div><div class="what">Verified phone number</div></div>
+      <div class="score-box"><div class="pts">+40</div><div class="what">Home worth $5M+</div></div>
+      <div class="score-box"><div class="pts">+30</div><div class="what">Home worth $1M+</div></div>
+      <div class="score-box"><div class="pts">+25</div><div class="what">Direct waterfront</div></div>
+      <div class="score-box"><div class="pts">+20</div><div class="what">$500K+ home value</div></div>
+      <div class="score-box"><div class="pts">+10</div><div class="what">Owner-occupied</div></div>
+      <div class="score-box"><div class="pts">+10</div><div class="what">Gated / HOA community</div></div>
+      <div class="score-box"><div class="pts">+15</div><div class="what">Bayou / river frontage</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🏷️ Tiers — Who to Call First</h2>
+    <div class="tier"><div class="dot" style="background:#e53e3e"></div><div class="info"><strong>Tier 1 — Call First</strong>Verified numbers, highest scores, waterfront $750K+</div></div>
+    <div class="tier"><div class="dot" style="background:#dd6b20"></div><div class="info"><strong>Tier 2 — Call Today</strong>Verified numbers, strong scores</div></div>
+    <div class="tier"><div class="dot" style="background:#d69e2e"></div><div class="info"><strong>Tier 3 — New Numbers</strong>Fresh finds, still being verified</div></div>
+    <div class="tier"><div class="dot" style="background:#a0aec0"></div><div class="info"><strong>Tier 4 — Needs Phone</strong>Verified property, number still hunting</div></div>
+  </div>
+
+  <!-- ============ SECTION 2: THE PROPOSAL ============ -->
+  <div class="section-label">📋 The Proposal</div>
+
+  <div class="card">
+    <h2>The Opportunity</h2>
+    <p>Hurricane Isaias is bearing down on the northern Gulf Coast. In the days after landfall, thousands of homeowners will need tree removal, debris cleanup, and storm restoration — and they will call whoever reaches them <strong>first</strong>.</p>
+    <p>This proposal puts S.G. Outdoor Solutions at the front of that line with a direct pipeline of qualified homeowner leads in the storm's impact zone.</p>
+  </div>
+
+  <div class="card">
+    <h2>What You Get</h2>
+    <ul>
+      <li><strong>Real homeowner name</strong> — no businesses, no vacant land, no guesses</li>
+      <li><strong>Complete, dialable phone number</strong> — never masked or partial</li>
+      <li><strong>Property address</strong> — with assessed value and ownership verification</li>
+      <li><strong>Qualification notes on every lead</strong> — why you should call this homeowner <em>now</em></li>
+      <li><strong>Ranked best to worst</strong> — richest waterfront homes first</li>
+      <li><strong>Live spreadsheet</strong> — sortable, filterable, tap-to-call from your phone</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Pricing</h2>
+    <table class="price-table">
+      <tr><th>Package</th><th>Price</th><th>Details</th></tr>
+      <tr>
+        <td><span class="tag">START TODAY</span><br><strong>Initial Lead Package</strong></td>
+        <td class="price">$2,000<br><span style="font-size:12px;font-weight:400;color:#666;">one-time</span></td>
+        <td><strong>100 qualified homeowner leads</strong>, delivered in waves starting today</td>
+      </tr>
+      <tr>
+        <td><span class="tag">OPTIONAL</span><br><strong>Ongoing Lead Service</strong></td>
+        <td class="price">$997<span style="font-size:14px;">/mo</span></td>
+        <td>Fresh leads every month. <strong>Month-to-month — cancel anytime, no obligation.</strong></td>
+      </tr>
+    </table>
+    <p style="margin-top:14px;">The $997/month is entirely your call. If you like the leads we produce, keep the machine running. If not, walk away — no contract, no cancellation fee, no hard feelings.</p>
+  </div>
+
+  <div class="card guarantee">
+    <h2>Our Lead Quality Guarantee</h2>
+    <ul>
+      <li>Every phone number is <strong>complete and dialable</strong> — we never deliver masked, partial, or fake numbers</li>
+      <li>Every lead is a <strong>verified homeowner</strong> at the listed property address</li>
+      <li><strong>Replacement guarantee:</strong> any disconnected or wrong number gets replaced with a new qualified lead — free</li>
+      <li>You only ever pay for <strong>real, callable homeowner leads</strong></li>
+    </ul>
+    <p class="fine">What we can't promise: that a homeowner answers, accepts a quote, or hires S.G. Outdoor Solutions. No lead company on earth can. What we guarantee is that every lead meets the spec above — or we replace it.</p>
+  </div>
+
+  <div class="card">
+    <h2>Exclusivity</h2>
+    <p>For as long as you are an active client, <strong>we will not sell, share, or provide leads to any other outdoor services, tree removal, or storm cleanup company in your region</strong> — the Florida Panhandle and Mississippi Gulf Coast hurricane impact zone. These leads are yours alone.</p>
+  </div>
+
+  <div class="card">
+    <h2>No CRM, No Extra Software</h2>
+    <p>You already have your own CRM. We deliver leads in a format that drops straight into it — no new software to learn, no extra logins, no upsell.</p>
+  </div>
+
+  <div class="card">
+    <h2>Agreement</h2>
+    <p>By signing below, S.G. Outdoor Solutions LLC agrees to the <strong>$2,000 one-time</strong> initial lead package. The $997/month ongoing service is optional and month-to-month, cancellable at any time with no further obligation.</p>
+    <div class="sig-block">
+      <p class="sig-line">X ________________________________________&nbsp;&nbsp;&nbsp; Date: __________</p>
+      <p class="fine">S.G. Outdoor Solutions LLC — Authorized Signature</p>
+      <p class="sig-line">X ________________________________________&nbsp;&nbsp;&nbsp; Date: __________</p>
+      <p class="fine">Premium Marketing Solutions — William A. Aldred</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a class="call" href="tel:+19899901048">Call to Get Started</a>
+    <p>Questions? Call Bill directly — (989) 990-1048</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  Premium Marketing Solutions &nbsp;·&nbsp; 8253 Meadowwood Dr, Davison, MI 48423<br>
+  (989) 990-1048 &nbsp;·&nbsp; contactpremiummarketing@gmail.com
+</div>
+
+</body>
+</html>
