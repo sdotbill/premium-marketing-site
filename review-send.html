@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Review Sender</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;background:#0b0e28;color:#eef1ff;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+h1{font-family:'Sora','Inter',sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:0 22px}
+header{padding:28px 0 6px;text-align:center}
+header img{height:64px;width:auto;border-radius:10px;margin:0 auto 8px}
+header h1{font-size:1.5rem;font-weight:800}
+header p{color:#a9b2d8;font-size:.85rem}
+.card{background:#141842;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:26px;margin:24px 0}
+label{display:block;font-size:.85rem;font-weight:600;color:#a9b2d8;margin:0 0 6px;letter-spacing:.02em}
+select,input{width:100%;font-size:1.05rem;padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:#0b0e28;color:#eef1ff;margin-bottom:18px;font-family:inherit}
+select:focus,input:focus{outline:none;border-color:#e8c96a}
+.preview{background:#0b0e28;border:1px dashed rgba(232,201,106,.4);border-radius:10px;padding:16px;font-size:.95rem;color:#dfe4ff;white-space:pre-wrap;word-break:break-word;min-height:110px}
+.preview-label{margin-top:4px}
+.btn{display:block;width:100%;text-align:center;font-weight:700;border-radius:12px;padding:18px;font-size:1.15rem;margin:20px 0 8px;transition:transform .15s;text-decoration:none;border:none;cursor:pointer;font-family:inherit}
+.btn-gold{background:linear-gradient(135deg,#e8c96a,#d4af37);color:#1a1405}
+.btn-gold:disabled{background:#3a3f6e;color:#8a90b8;cursor:not-allowed;box-shadow:none}
+.btn:not(:disabled):hover{transform:translateY(-2px)}
+.hint{text-align:center;color:#a9b2d8;font-size:.85rem;padding-bottom:40px}
+footer{padding:20px 0 40px;text-align:center;color:#5c628f;font-size:.8rem}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<img src="assets/logo.png" alt="Premium Marketing">
+<h1>Review Sender</h1>
+<p>Pick the company, enter the customer, tap to text.</p>
+</div>
+</header>
+<div class="wrap">
+<div class="card">
+<label for="company">Company</label>
+<select id="company">
+<option value="maki">Maki Tree Service</option>
+<option value="pm">Premium Marketing</option>
+</select>
+<label for="fname">Customer first name</label>
+<input id="fname" type="text" placeholder="e.g. John" autocomplete="off">
+<label for="phone">Customer phone (10 digits)</label>
+<input id="phone" type="tel" inputmode="numeric" placeholder="e.g. 8105551234" autocomplete="off">
+<label class="preview-label">Message preview</label>
+<div class="preview" id="preview"></div>
+<button class="btn btn-gold" id="smsBtn" disabled>Open SMS</button>
+</div>
+<div class="hint">Opens your messaging app with the text ready to send.<br>Just tap send.</div>
+</div>
+<footer>
+<div class="wrap">Premium Marketing &middot; internal tool</div>
+</footer>
+<script>
+var COMPANIES = {
+  maki: { name: "Maki Tree Service",
+          page: "https://sdotbill.github.io/premium-marketing-site/maki-review.html" },
+  pm:   { name: "Premium Marketing",
+          page: "https://sdotbill.github.io/premium-marketing-site/premium-marketing-review.html" }
+};
+var companyEl = document.getElementById('company');
+var fnameEl = document.getElementById('fname');
+var phoneEl = document.getElementById('phone');
+var previewEl = document.getElementById('preview');
+var smsBtn = document.getElementById('smsBtn');
+
+function digitsOnly(s){ return (s||'').replace(/\D/g,''); }
+
+function buildMessage(){
+  var c = COMPANIES[companyEl.value];
+  var name = (fnameEl.value||'').trim();
+  return "Hi " + name + ", thanks for choosing " + c.name +
+    "! If you were happy with our work, would you leave us a quick Google review? " +
+    "Takes about 30 seconds: " + c.page;
+}
+
+function refresh(){
+  var name = (fnameEl.value||'').trim();
+  var digits = digitsOnly(phoneEl.value);
+  var ok = name.length > 0 && digits.length === 10;
+  previewEl.textContent = ok ? buildMessage() : "Fill in the name and a 10-digit phone number to preview the message.";
+  smsBtn.disabled = !ok;
+  smsBtn.textContent = ok ? "Open SMS to " + digits : "Open SMS";
+}
+
+smsBtn.addEventListener('click', function(){
+  var digits = digitsOnly(phoneEl.value);
+  if (digits.length !== 10) return;
+  var url = "sms:+1" + digits + "?body=" + encodeURIComponent(buildMessage());
+  window.location.href = url;
+});
+
+companyEl.addEventListener('change', refresh);
+fnameEl.addEventListener('input', refresh);
+phoneEl.addEventListener('input', refresh);
+refresh();
+</script>
+</body>
+</html>
