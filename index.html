@@ -158,7 +158,7 @@ header.nav.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.45)}
 
 /* ---------- Services ---------- */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
-.svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;position:relative;
+.svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;position:relative;overflow:hidden;
   transition:transform .2s,border-color .2s,box-shadow .2s}
 .svc-card:hover{transform:translateY(-6px);border-color:rgba(47,157,255,.55);box-shadow:0 16px 36px rgba(47,157,255,.14)}
 .svc-card.core{border-top:3px solid var(--gold);background:var(--card-2)}
@@ -174,13 +174,10 @@ header.nav.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.45)}
 .svc-card{cursor:pointer}
 .svc-card:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .svc-card h3{padding-right:46px}
-.svc-chev{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;border:1px solid rgba(212,175,55,.55);display:flex;align-items:center;justify-content:center;transition:transform .35s ease,background .35s ease;pointer-events:none}
-.svc-chev::before{content:'+';font-size:1.35rem;line-height:1;color:var(--gold-soft);font-weight:700}
-.svc-card.open .svc-chev{transform:rotate(45deg);background:rgba(212,175,55,.14)}
-.svc-detail{max-height:0;overflow:hidden;transition:max-height .45s ease}
-.svc-detail-inner{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
-.svc-detail-inner p{margin:0 0 10px}
-.svc-detail-inner p:last-child{margin-bottom:2px}
+.svc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;border:2px solid rgba(232,201,106,.9);background:rgba(11,14,40,.72);display:flex;align-items:center;justify-content:center;z-index:4;pointer-events:none;transition:opacity .25s}
+.svc-play::before{content:'';width:0;height:0;border-left:20px solid #e8c96a;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:5px}
+.svc-card.playing .svc-play{opacity:0}
+/* detail accordion removed */
 
 
 /* ---------- Service tile hover videos ---------- */
@@ -497,45 +494,45 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--nav
         <div class="icon">&#128241;</div>
         <h3>Social Media Management</h3>
         <p>Your content engine. Posts, reels, and stories built to get seen &mdash; plus community management that turns followers into buyers across Facebook, Instagram, TikTok, and YouTube.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>We take over your business&rsquo;s social media completely &mdash; planning, creating, and publishing posts, reels, and stories across Facebook, Instagram, TikTok, and YouTube, and answering comments and messages on your behalf.</p><p>New customers discover you through consistent, professional content showing up in their feeds. Existing customers stay engaged and keep coming back because your business never fades from view.</p></div></div>
+      
       </div>
       <div class="svc-card core reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/free-growth-audit.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button>
         <div class="icon">&#128269;</div>
         <h3>Free Growth Audit</h3>
         <p>A no-BS teardown of your online presence. We show you three things currently costing you customers &mdash; free, no strings attached.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>A free, no-obligation review of your entire online presence &mdash; social profiles, Google listing, website, and reviews. We pinpoint the specific gaps currently costing you customers and hand you the findings in plain language, whether or not you ever hire us.</p><p>Most owners discover at least three fixable problems they never knew they had &mdash; and a clear picture of what it would take to fix them.</p></div></div>
+      
       </div>
       <div class="svc-card core reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/tracked-landing-pages.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button>
         <span class="badge">Our Edge</span>
         <div class="icon">&#128202;</div>
         <h3>Tracked Landing Pages</h3>
         <p>Pages that mirror your site but track every click, call, and customer. You&rsquo;ll know exactly how many new and repeat customers each campaign generated. Real ROI, real numbers.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>We build dedicated landing pages that mirror your website and connect them to your ads, call links, and campaigns. Every click, call, and customer is tracked back to the exact campaign that produced it.</p><p>You&rsquo;ll know precisely how many new and repeat customers your marketing generated &mdash; reported in plain numbers every month, so every dollar is accounted for.</p></div></div>
+      
       </div>
     </div>
     <div class="svc-grid rest">
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/seo-local-search.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>SEO &amp; Local Search</h3><p>Get found first on Google when customers are ready to buy.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Search engine optimization that gets your business found on Google when nearby customers search for what you offer. We optimize your Google Business Profile, website content, and local listings so you show up in the map pack and top results.</p><p>New customers find you at the exact moment they&rsquo;re ready to buy &mdash; instead of finding your competitor.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/paid-advertising.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Paid Advertising</h3><p>Google and Meta ads managed for return on ad spend, not impressions.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Professionally managed advertising on Google and Meta, built around one goal: return on your ad spend. We handle targeting, ad creative, budgets, and ongoing optimization, then report exactly what each dollar brought back.</p><p>Your ads reach new customers who are actively looking for your services, while timely offers keep past customers coming back.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/email-sms-campaigns.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Email &amp; SMS Campaigns</h3><p>Turn one-time buyers into repeat revenue on autopilot.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Direct marketing to people who already know you &mdash; past customers and prospects who asked to hear from you. We design and send promotions, reminders, and updates that bring previous buyers back through your door and turn one-time purchases into repeat business.</p><p>It&rsquo;s the lowest-cost way to generate revenue from customers you&rsquo;ve already earned.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/reputation-management.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Reputation Management</h3><p>Review generation and response systems that build and protect your five-star reputation.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>A system that generates a steady stream of genuine customer reviews and makes sure every review &mdash; good or bad &mdash; gets a professional response. Strong ratings make new customers choose you when they&rsquo;re comparing options online.</p><p>When past customers see you value their feedback, they&rsquo;re more likely to return &mdash; and to recommend you to others.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/website-design.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Website Design</h3><p>Sites engineered to convert visitors into customers &mdash; not digital brochures.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>A modern website built to convert visitors into customers &mdash; fast, mobile-friendly, and designed around one job: getting the call, the booking, or the sale. New customers who find you on Google or social media land on a site that earns their trust instantly.</p><p>Existing customers get an easy way to reach you, book again, or buy again &mdash; without friction.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/smart-automation.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Smart Automation</h3><p>Behind-the-scenes tools that do more of the heavy lifting &mdash; faster turnaround, lower cost, same personal touch where it counts.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Behind-the-scenes tools that handle the repetitive work &mdash; follow-ups, scheduling, review requests, and routine customer messages &mdash; without losing the personal touch where it counts. You respond faster than competitors and miss fewer opportunities.</p><p>Your customers just notice you&rsquo;re always quick, always professional, always on it.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/podcast-creation.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Podcast Creation</h3><p>Concept to published episodes. Your voice, everywhere your customers listen.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>We take your podcast from concept to published episodes &mdash; recording guidance, editing, and distribution to every major platform. Your voice reaches new audiences who discover you through search and recommendations, building trust before they ever contact you.</p><p>Regular episodes keep past customers hearing from you, so your business stays at the front of their minds.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/custom-app-development.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Custom App Development</h3><p>Mobile and web apps built around your business.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>A mobile or web app built specifically around your business &mdash; booking, ordering, loyalty rewards, or whatever serves your customers best. New customers get a polished, modern experience from the first tap.</p><p>An app on a customer&rsquo;s phone is a direct line to them: repeat customers get one-tap reordering, reminders, and rewards that keep them loyal.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/business-development.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Business Development</h3><p>Growth strategy: partnerships, pricing, and new revenue streams for companies ready to scale.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Strategic guidance on growing your company &mdash; partnerships, referral systems, pricing, and new revenue streams. We look at your whole business the way a marketing partner should: not just where customers come from, but how you keep them and grow what each one is worth.</p><p>Built for established businesses ready to scale beyond word of mouth.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/lead-generation.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Lead Generation</h3><p>Your next customers, found for you: verified local prospects &mdash; ranked by how likely they are to buy.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>We research your market and hand you a ranked list of verified prospects &mdash; real businesses with contact info, an audit of their online presence, and notes on exactly why each one is worth calling. It&rsquo;s the same system we use to find our own customers.</p><p>You stop guessing who to call and start every week with a prioritized list of the businesses most likely to say yes.</p></div></div></div>
+      </div>
       <div class="svc-card mini reveal" tabindex="0" role="button" aria-expanded="false"><video class="svc-video" data-src="videos/content-creation.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button class="svc-mute" type="button" aria-label="Unmute video">&#128263;</button><h3>Content Creation</h3><p>Scroll-stopping photos, videos, and graphics made for your business &mdash; formatted for every platform.</p>
-      <div class="svc-detail" aria-hidden="true"><div class="svc-detail-inner"><p>Professional photos, videos, and graphics created for your business and formatted for every platform. Great content is what stops the scroll &mdash; it&rsquo;s how new customers notice you in a crowded feed and how your business looks established and trustworthy.</p><p>We produce a steady supply, so your social media, website, and ads always look sharp &mdash; without you ever picking up a camera.</p></div></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -930,40 +927,7 @@ document.getElementById('audit-form').addEventListener('submit', e => {
 
 // Service card accordion — one open at a time
 (function(){
-  var cards=Array.prototype.slice.call(document.querySelectorAll('.svc-card'));
-  function closeCard(card){
-    card.classList.remove('open');
-    card.setAttribute('aria-expanded','false');
-    var d=card.querySelector('.svc-detail');
-    if(d){d.style.maxHeight='0px';d.setAttribute('aria-hidden','true');}
-  }
-  cards.forEach(function(card){
-    var detail=card.querySelector('.svc-detail');
-    if(!detail) return;
-    var chev=document.createElement('span');
-    chev.className='svc-chev';chev.setAttribute('aria-hidden','true');
-    card.appendChild(chev);
-    function toggle(){
-      var willOpen=!card.classList.contains('open');
-      cards.forEach(function(o){if(o!==card)closeCard(o);});
-      if(willOpen){
-        card.classList.add('open');
-        card.setAttribute('aria-expanded','true');
-        detail.setAttribute('aria-hidden','false');
-        detail.style.maxHeight=detail.scrollHeight+'px';
-      }else{closeCard(card);}
-    }
-    card.addEventListener('click',toggle);
-    card.addEventListener('keydown',function(e){
-      if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}
-    });
-  });
-  var rt;addEventListener('resize',function(){
-    clearTimeout(rt);rt=setTimeout(function(){
-      var open=document.querySelector('.svc-card.open .svc-detail');
-      if(open)open.style.maxHeight=open.scrollHeight+'px';
-    },200);
-  });
+  /* Expand-on-click removed: click now plays the video only. */
 })();
 </script>
 
@@ -1004,14 +968,20 @@ document.getElementById('audit-form').addEventListener('submit', e => {
       syncBtn();
       if(!video.muted && video.paused){ play(); }
     });
+    var playBtn=document.createElement('span');
+    playBtn.className='svc-play';playBtn.setAttribute('aria-hidden','true');
+    card.appendChild(playBtn);
+    function togglePlay(e){
+      if(e.target.closest('.svc-mute')) return;
+      if(card.classList.contains('playing')){ stop(); } else { play(); }
+    }
+    card.addEventListener('click', togglePlay);
+    card.addEventListener('keydown', function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePlay(e);}
+    });
     if(hoverable){
       card.addEventListener('mouseenter', play);
       card.addEventListener('mouseleave', stop);
-    } else {
-      card.addEventListener('click', function(e){
-        if(e.target.closest('.svc-mute')) return;
-        if(card.classList.contains('playing')){ stop(); } else { play(); }
-      });
     }
     syncBtn();
   });
