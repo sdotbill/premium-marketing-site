@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Signing Link Maker — Premium Marketing (Internal)</title>
+<title>Signing Link Maker — Premium Marketing Solutions (Internal)</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0b1f33; color: #eaf2fa; min-height: 100vh; padding: 20px 16px 60px; }
@@ -32,8 +32,9 @@
   <div class="brand">
     <div class="tree">🌲</div>
     <h1>Signing Link Maker</h1>
-    <p>Premium Marketing — internal tool. Fill in the deal, get the textable signing link.</p>
+    <p>Premium Marketing Solutions — internal tool. Fill in the deal, get the textable signing link.</p>
   </div>
+
   <div class="card">
     <label>Business name</label>
     <input id="c" placeholder="Maki Tree Service" autocomplete="off">
@@ -50,6 +51,7 @@
     <input id="e" placeholder="client@business.com" autocomplete="off">
     <button class="btn" onclick="make()">Make signing link</button>
   </div>
+
   <div class="card" id="out">
     <label>Signing link — copy &amp; text it</label>
     <div id="linkBox"></div>
@@ -60,8 +62,9 @@
     <p class="hint">After they sign, the signature lands in your inbox and the signature watcher pings you. Countersign in Forge, then text the payment link — same as always.</p>
   </div>
 </div>
+
 <script>
-const BASE = 'https://sdotbill.github.io/premium-marketing-site/sign.html';
+const BASE = 'https://PremiumMarketingSolutionsLLC.com/sign.html';
 function slug(s){ return (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,30) || 'client'; }
 function autoToken(){
   const d = new Date();
@@ -70,6 +73,7 @@ function autoToken(){
 }
 document.getElementById('c').addEventListener('input', autoToken);
 autoToken();
+
 let lastLink = '', lastSms = '';
 function make(){
   const v = id => document.getElementById(id).value.trim();
@@ -82,7 +86,7 @@ function make(){
   if(v('d')) p.set('d', v('d').replace(/[^0-9]/g,''));
   if(v('e')) p.set('e', v('e'));
   lastLink = BASE + '?' + p.toString();
-  lastSms = 'Hi ' + (v('n').split(' ')[0] || 'there') + ', here\'s your Premium Marketing service agreement: ' + lastLink + ' — read through and sign right on your phone. Let me know if you have any questions. — Bill (989) 990-1048';
+  lastSms = 'Hi ' + (v('n').split(' ')[0] || 'there') + ', here\'s your Premium Marketing Solutions service agreement: ' + lastLink + ' — read through and sign right on your phone. Let me know if you have any questions. — Bill (989) 990-1048';
   document.getElementById('linkBox').textContent = lastLink;
   document.getElementById('smsBox').textContent = lastSms;
   document.getElementById('out').style.display = 'block';
