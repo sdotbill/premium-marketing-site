@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forge — The Machine That Creates Customers</title>
+<meta name="description" content="Forge is an AI prospecting system that hands marketing agencies 100 qualified local-business prospects a month. Owner name, direct phone, full weakness audit.">
+<style>
+  :root { --ember:#ff6a00; --ember2:#ff9a3c; --bg:#0d0d0f; --panel:#16161a; --txt:#f2f2f2; --mut:#a8a8b0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--txt); font-family:'Segoe UI',system-ui,-apple-system,sans-serif; line-height:1.6; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+  header.hero { text-align:center; padding:90px 24px 70px; background:radial-gradient(ellipse at 50% 0%, #2a1503 0%, var(--bg) 60%); }
+  header.hero img.logo { width:120px; height:120px; border-radius:24px; box-shadow:0 0 60px rgba(255,106,0,.35); }
+  h1 { font-size:3rem; margin:28px 0 12px; letter-spacing:-1px; }
+  h1 span { color:var(--ember); }
+  .tag { font-size:1.35rem; color:var(--mut); max-width:640px; margin:0 auto 34px; }
+  .cta { display:inline-block; background:linear-gradient(135deg,var(--ember),var(--ember2)); color:#111; font-weight:800; font-size:1.15rem; padding:16px 44px; border-radius:12px; text-decoration:none; box-shadow:0 8px 30px rgba(255,106,0,.4); transition:transform .15s; }
+  .cta:hover { transform:translateY(-2px); }
+  .cta.ghost { background:transparent; color:var(--ember); border:2px solid var(--ember); box-shadow:none; margin-left:12px; }
+  section { padding:70px 0; }
+  section.alt { background:var(--panel); }
+  h2 { font-size:2rem; margin-bottom:18px; letter-spacing:-.5px; }
+  h2 span { color:var(--ember); }
+  p.lead { font-size:1.15rem; color:var(--mut); max-width:720px; margin-bottom:16px; }
+  .grid3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; margin-top:36px; }
+  .card { background:#1d1d22; border:1px solid #2c2c33; border-radius:14px; padding:28px; }
+  .card h3 { color:var(--ember2); margin-bottom:10px; font-size:1.2rem; }
+  .card p { color:var(--mut); font-size:.98rem; }
+  .num { font-size:2.6rem; font-weight:800; color:var(--ember); }
+  .numlbl { color:var(--mut); font-size:.95rem; margin-top:4px; }
+  .steps { counter-reset:st; margin-top:30px; }
+  .step { display:flex; gap:20px; margin-bottom:26px; align-items:flex-start; }
+  .step::before { counter-increment:st; content:counter(st); flex:0 0 46px; height:46px; border-radius:50%; background:linear-gradient(135deg,var(--ember),var(--ember2)); color:#111; font-weight:800; font-size:1.3rem; display:flex; align-items:center; justify-content:center; }
+  .step h3 { margin-bottom:6px; }
+  .step p { color:var(--mut); }
+  .offer { text-align:center; }
+  .price { font-size:4rem; font-weight:800; color:var(--ember); }
+  .price small { font-size:1.2rem; color:var(--mut); }
+  ul.check { list-style:none; margin:26px auto; max-width:520px; text-align:left; }
+  ul.check li { padding:10px 0 10px 36px; position:relative; color:var(--txt); }
+  ul.check li::before { content:"✓"; position:absolute; left:0; color:var(--ember); font-weight:800; font-size:1.2rem; }
+  form.demo { max-width:520px; margin:30px auto 0; display:grid; gap:14px; }
+  form.demo input, form.demo select { padding:14px 16px; border-radius:10px; border:1px solid #2c2c33; background:#1d1d22; color:var(--txt); font-size:1rem; }
+  footer { text-align:center; padding:40px 24px; color:var(--mut); font-size:.9rem; border-top:1px solid #222; }
+  @media(max-width:640px){ h1{font-size:2.1rem;} .cta.ghost{margin-left:0;margin-top:12px;} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="forge-logo.webp" alt="Forge logo">
+    <h1>FORGE<span>.</span></h1>
+    <p class="tag">The machine that creates customers. An AI prospecting system that hands your agency 100 qualified local-business prospects every month — owner name, direct phone, full weakness audit.</p>
+    <a class="cta" href="#demo">Book a Demo</a>
+    <a class="cta ghost" href="#how">See How It Works</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Your team burns hours <span>hunting.</span> Forge hunts <span>24/7.</span></h2>
+    <p class="lead">Google Maps. Guessing at owner names. Cold lists full of dead numbers. Every month your prospecting starts at zero — and your closers wait. Forge researches local businesses around the clock, finds the decision-maker by name, finds their direct phone number, audits exactly what's broken in their online presence, and ranks every prospect by need and ability to pay.</p>
+    <div class="grid3">
+      <div><div class="num">7,291</div><div class="numlbl">prospects researched &amp; qualified in our home market</div></div>
+      <div><div class="num">2,660</div><div class="numlbl">high-priority leads — every one with a name &amp; phone</div></div>
+      <div><div class="num">50,000</div><div class="numlbl">Monte Carlo trials modeling the business behind it</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="how">
+  <div class="wrap">
+    <h2>How Forge <span>thinks.</span></h2>
+    <p class="lead">Five jobs, running continuously. Three automated systems underneath. One learning loop that gets smarter with every sales call.</p>
+    <div class="steps">
+      <div class="step"><div><h3>Finds the businesses</h3><p>Town by town, category by category — roofers, HVAC, plumbers, dentists, lawyers. Twenty-four seven, no throttle. More qualified leads than any team can call.</p></div></div>
+      <div class="step"><div><h3>Finds the human</h3><p>No name, no phone, no record. Forge digs up the owner's name and a valid 10-digit number for every single lead. Your reps call humans, not listings.</p></div></div>
+      <div class="step"><div><h3>Audits the weakness</h3><p>Website? Facebook dead or alive? Google reviews? Rating? Every lead carries full intel — which is your pitch, pre-written before you ever dial.</p></div></div>
+      <div class="step"><div><h3>Scores every prospect</h3><p>Decision-maker found, weak web presence, real commercial substance. The owners who need you most and can pay rise to the top. Ranked hottest first.</p></div></div>
+      <div class="step"><div><h3>Learns from every call</h3><p>Every dial, every disposition feeds back into the scoring. The machine retrains on what actually closes. Every call your team makes sharpens the map for the next hundred.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The numbers <span>behind it.</span></h2>
+    <p class="lead">We modeled the business across 50,000 trials before we sold a single license. Median projections: $959K year one, $3.76M year two, $6.31M year three, $8.59M year four, $10.76M year five. Every one of the 50,000 trials cleared $500K in year one. And we proved it on ourselves first — three paying customers in our first week, all found by the machine.</p>
+    <div class="grid3">
+      <div><div class="num">$959K</div><div class="numlbl">median year-one revenue (every trial over $500K)</div></div>
+      <div><div class="num">$10.76M</div><div class="numlbl">median year-five revenue</div></div>
+      <div><div class="num">474</div><div class="numlbl">active customers at year five (median)</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt offer" id="demo">
+  <div class="wrap">
+    <h2>One agency per market. <span>Yours?</span></h2>
+    <div class="price">$1,000<small>/month</small></div>
+    <ul class="check">
+      <li>100 qualified prospects a month — name, direct phone, weakness audit</li>
+      <li>Delivered under YOUR brand. Your clients never hear about us.</li>
+      <li>Ranked hottest first. New every month.</li>
+      <li>Territory protection while you're licensed</li>
+      <li>Month to month. 30 days to walk.</li>
+    </ul>
+    <form class="demo" id="demoForm">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="text" name="agency" placeholder="Agency name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone">
+      <input type="text" name="market" placeholder="Your market & verticals (e.g. Dallas roofers)">
+      <button class="cta" type="submit" style="border:none;cursor:pointer;">Show Me My 10 Free Prospects</button>
+    </form>
+    <p style="color:var(--mut);font-size:.9rem;margin-top:14px;">We run 10 free prospects in your market. You call them. Then we talk.</p>
+  </div>
+</section>
+
+<footer>
+  Forge is a division of Premium Marketing Solutions LLC · 8257 Meadowwood Drive, Davison, MI 48423<br>
+  william@premiummarketingsolutionsllc.com
+</footer>
+
+<script>
+document.getElementById('demoForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var d = new FormData(e.target);
+  var msg = 'FORGE DEMO REQUEST\nName: '+d.get('name')+'\nAgency: '+d.get('agency')+'\nEmail: '+d.get('email')+'\nPhone: '+d.get('phone')+'\nMarket: '+d.get('market');
+  window.location.href = 'mailto:william@premiummarketingsolutionsllc.com?subject='+encodeURIComponent('Forge demo: '+d.get('agency'))+'&body='+encodeURIComponent(msg);
+});
+</script>
+</body>
+</html>
