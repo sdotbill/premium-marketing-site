@@ -41,33 +41,31 @@
 </style>
 </head>
 <body>
-
 <div class="topbar">
   <div class="brand">Premium Marketing Solutions</div>
-  <h1>Managed Marketing Agreement</h1>
+  <h1>Forge Business Manager Agreement</h1>
 </div>
-
 <div class="wrap" id="formwrap">
-
   <div class="card">
     <h2>Your Package</h2>
     <div class="deal-line"><span class="k">Client</span><span class="v">Patrick Murphy</span></div>
     <div class="deal-line"><span class="k">Setup &amp; launch</span><span class="v">$699 one-time</span></div>
-    <div class="deal-line"><span class="k">Monthly managed account</span><span class="v">$699/mo</span></div>
+    <div class="deal-line"><span class="k">Forge managed, monthly</span><span class="v">$699/mo</span></div>
     <div class="deal-line"><span class="k">Term</span><span class="v">12 months, then month-to-month (30-day notice to cancel)</span></div>
     <div class="deal-line"><span class="k">Territory</span><span class="v">Genesee County, MI — exclusive</span></div>
     <div class="deal-line"><span class="k">Date</span><span class="v" id="today"></span></div>
   </div>
-
+  <div class="card" style="background:#f0f9ff;border:1px solid #bfe3f5;">
+    <p style="font-size:14px;margin:0;"><strong>Friend rate locked.</strong> Standard Forge managed is <strong>$1,997</strong> setup + <strong>$997/mo</strong>. Patrick pays <strong>$699</strong> + <strong>$699/mo</strong> — same full business manager, friend price.</p>
+  </div>
   <div class="card">
     <h2>Agreement Terms</h2>
-    <p><strong>1. Setup ($699):</strong> Due at signing. Covers personal brand website build, Google Business Profile setup, review system installation, public profile cleanup, and social account configuration.</p>
-    <p><strong>2. Monthly Service ($699/month):</strong> Social media management, buyer &amp; seller lead generation, Google Business Profile management, review management, website upkeep, and profile maintenance. Billed monthly starting 30 days after signing.</p>
+    <p><strong>1. Setup ($699):</strong> Due at signing. Your Forge AI business manager goes to work immediately: full website design and build from your free growth audit, Google Business Profile setup and optimization, review system installation, public profile cleanup, and social account configuration. The build starts the day you sign.</p>
+    <p><strong>2. Forge Business Manager ($699/month):</strong> Forge runs your online presence. It audits your website, social media, Google Business Profile, and reviews — finds what's broken, fixes it, and keeps improving it. Social media management and posting, buyer &amp; seller lead generation, Google Business Profile management, review management, website upkeep and upgrades. It asks you only when it needs something from you (a photo, a 30-second voice sample) — everything else, it does itself. Billed monthly starting 30 days after signing.</p>
     <p style="background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:12px 14px;"><strong>Cancellation:</strong> After the initial 12-month term, Client may cancel with <strong>30 days' written notice</strong> (text message or email is sufficient). No cancellation fee. No further charges after the notice period ends.</p>
     <p><strong>3. Exclusivity:</strong> Provider will not provide marketing services or leads to any other real estate agent in Genesee County, Michigan while Client is active.</p>
     <p><strong>4. What we can't promise:</strong> We guarantee the work — every post published, every lead delivered with full details, every review requested. We cannot guarantee a specific number of closings; no marketing company on earth can. What we guarantee is that the machine runs every single month.</p>
   </div>
-
   <div class="card">
     <h2>Sign Below</h2>
     <p style="color:#666;font-size:14px;">Type your full legal name — watch it become your signature.</p>
@@ -78,7 +76,6 @@
       <span class="sig" id="sigRender" style="display:none"></span>
     </div>
     <div class="sig-label">Electronic Signature</div>
-
     <div class="consent">
       <input type="checkbox" id="consent">
       <span>I have read the agreement above and agree to its terms. I understand my typed name below constitutes my electronic signature.</span>
@@ -86,9 +83,7 @@
     <button class="btn" id="signBtn" onclick="doSign()">Sign Agreement</button>
     <div class="err" id="err">Please type your full name and check the consent box.</div>
   </div>
-
 </div>
-
 <div class="wrap">
   <div class="card done" id="donebox">
     <div class="check">✓</div>
@@ -102,32 +97,20 @@
   </div>
   <div class="fine">Premium Marketing Solutions LLC · Davison, MI</div>
 </div>
-
 <script>
-document.getElementById('today').textContent = new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
-
+document.getElementById('today').textContent = new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric', hour:'numeric', minute:'2-digit'});
 function updateSig() {
   var name = document.getElementById('signerName').value.trim();
   var render = document.getElementById('sigRender');
   var ph = document.getElementById('sigPlaceholder');
-  if (name.length > 0) {
-    render.textContent = name;
-    render.style.display = 'inline';
-    ph.style.display = 'none';
-  } else {
-    render.style.display = 'none';
-    ph.style.display = 'inline';
-  }
+  if (name.length > 0) { render.textContent = name; render.style.display = 'inline'; ph.style.display = 'none'; }
+  else { render.style.display = 'none'; ph.style.display = 'inline'; }
 }
-
 function doSign() {
   var name = document.getElementById('signerName').value.trim();
   var consent = document.getElementById('consent').checked;
   var err = document.getElementById('err');
-  if (name.length < 3 || !consent) {
-    err.style.display = 'block';
-    return;
-  }
+  if (name.length < 3 || !consent) { err.style.display = 'block'; return; }
   err.style.display = 'none';
   var now = new Date();
   var stamp = now.toLocaleString('en-US', {year:'numeric', month:'long', day:'numeric', hour:'numeric', minute:'2-digit'});
@@ -141,6 +124,5 @@ function doSign() {
   document.title = '✓ Signed — ' + name;
 }
 </script>
-
 </body>
 </html>
