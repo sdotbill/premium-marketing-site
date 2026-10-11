@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>Sign Agreement — Patrick Murphy | Premium Marketing Solutions</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
@@ -41,11 +42,14 @@
 </style>
 </head>
 <body>
+
 <div class="topbar">
   <div class="brand">Premium Marketing Solutions</div>
   <h1>Forge Business Manager Agreement</h1>
 </div>
+
 <div class="wrap" id="formwrap">
+
   <div class="card">
     <h2>Your Package</h2>
     <div class="deal-line"><span class="k">Client</span><span class="v">Patrick Murphy</span></div>
@@ -55,9 +59,11 @@
     <div class="deal-line"><span class="k">Territory</span><span class="v">Genesee County, MI — exclusive</span></div>
     <div class="deal-line"><span class="k">Date</span><span class="v" id="today"></span></div>
   </div>
+
   <div class="card" style="background:#f0f9ff;border:1px solid #bfe3f5;">
     <p style="font-size:14px;margin:0;"><strong>Friend rate locked.</strong> Standard Forge managed is <strong>$1,997</strong> setup + <strong>$997/mo</strong>. Patrick pays <strong>$699</strong> + <strong>$699/mo</strong> — same full business manager, friend price.</p>
   </div>
+
   <div class="card">
     <h2>Agreement Terms</h2>
     <p><strong>1. Setup ($699):</strong> Due at signing. Your Forge AI business manager goes to work immediately: full website design and build from your free growth audit, Google Business Profile setup and optimization, review system installation, public profile cleanup, and social account configuration. The build starts the day you sign.</p>
@@ -66,6 +72,7 @@
     <p><strong>3. Exclusivity:</strong> Provider will not provide marketing services or leads to any other real estate agent in Genesee County, Michigan while Client is active.</p>
     <p><strong>4. What we can't promise:</strong> We guarantee the work — every post published, every lead delivered with full details, every review requested. We cannot guarantee a specific number of closings; no marketing company on earth can. What we guarantee is that the machine runs every single month.</p>
   </div>
+
   <div class="card">
     <h2>Sign Below</h2>
     <p style="color:#666;font-size:14px;">Type your full legal name — watch it become your signature.</p>
@@ -76,6 +83,7 @@
       <span class="sig" id="sigRender" style="display:none"></span>
     </div>
     <div class="sig-label">Electronic Signature</div>
+
     <div class="consent">
       <input type="checkbox" id="consent">
       <span>I have read the agreement above and agree to its terms. I understand my typed name below constitutes my electronic signature.</span>
@@ -83,7 +91,9 @@
     <button class="btn" id="signBtn" onclick="doSign()">Sign Agreement</button>
     <div class="err" id="err">Please type your full name and check the consent box.</div>
   </div>
+
 </div>
+
 <div class="wrap">
   <div class="card done" id="donebox">
     <div class="check">✓</div>
@@ -97,20 +107,32 @@
   </div>
   <div class="fine">Premium Marketing Solutions LLC · Davison, MI</div>
 </div>
+
 <script>
-document.getElementById('today').textContent = new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric', hour:'numeric', minute:'2-digit'});
+document.getElementById('today').textContent = new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+
 function updateSig() {
   var name = document.getElementById('signerName').value.trim();
   var render = document.getElementById('sigRender');
   var ph = document.getElementById('sigPlaceholder');
-  if (name.length > 0) { render.textContent = name; render.style.display = 'inline'; ph.style.display = 'none'; }
-  else { render.style.display = 'none'; ph.style.display = 'inline'; }
+  if (name.length > 0) {
+    render.textContent = name;
+    render.style.display = 'inline';
+    ph.style.display = 'none';
+  } else {
+    render.style.display = 'none';
+    ph.style.display = 'inline';
+  }
 }
+
 function doSign() {
   var name = document.getElementById('signerName').value.trim();
   var consent = document.getElementById('consent').checked;
   var err = document.getElementById('err');
-  if (name.length < 3 || !consent) { err.style.display = 'block'; return; }
+  if (name.length < 3 || !consent) {
+    err.style.display = 'block';
+    return;
+  }
   err.style.display = 'none';
   var now = new Date();
   var stamp = now.toLocaleString('en-US', {year:'numeric', month:'long', day:'numeric', hour:'numeric', minute:'2-digit'});
@@ -124,5 +146,6 @@ function doSign() {
   document.title = '✓ Signed — ' + name;
 }
 </script>
+
 </body>
 </html>
