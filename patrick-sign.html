@@ -144,6 +144,18 @@ function doSign() {
   var msg = 'MURPHY SIGNED: ' + name + ' signed the Patrick Murphy $699/$699 agreement at ' + stamp + ' ET.';
   document.getElementById('smsBtn').href = 'sms:+19899901048?&body=' + encodeURIComponent(msg);
   document.title = '✓ Signed — ' + name;
+  // Auto-notify Bill by email (FormSubmit) so the signature is recorded even if the client skips the SMS button.
+  try {
+    fetch('https://formsubmit.co/ajax/william@premiummarketingsolutionsllc.com', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({
+        _subject: 'SIGNED: patrick-murphy — ' + name,
+        name: name,
+        message: msg + ' Page: patrick-sign.html'
+      })
+    }).catch(function(){});
+  } catch (e) {}
 }
 </script>
 
