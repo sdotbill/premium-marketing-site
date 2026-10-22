@@ -82,24 +82,14 @@
     <div style="font-size:12px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-top:10px;">Co-owner &amp; CFO, Premium Marketing Solutions LLC</div>
   </div>
 
-  <div class="card sig-block">
-    <h2>Witness — Chelsea Aldred <span style="font-size:13px;color:#888;">(optional)</span></h2>
-    <p style="color:#666;font-size:14px;">Type your full legal name — watch it become your signature.</p>
-    <label class="f" for="signer3">Full legal name</label>
-    <input type="text" id="signer3" placeholder="Chelsea Aldred" autocomplete="name" oninput="updateSig(3)">
-    <div class="sig-preview" id="sigPreview3">
-      <span class="placeholder" id="sigPlaceholder3">Signature will appear here</span>
-      <span class="sig" id="sigRender3" style="display:none"></span>
-    </div>
-  </div>
 
   <div class="card">
     <div class="consent">
       <input type="checkbox" id="consent">
-      <span>We have read the full Declaration of the Exolex above and sign it as written, at Davison, Michigan, on October 22, 2026.</span>
+      <span>We have read the full Declaration of the Exolex above and sign it as written, in each other's presence — each other's witness — at Davison, Michigan, on October 22, 2026.</span>
     </div>
     <button class="btn" id="signBtn" onclick="sign()" disabled>Sign Declaration</button>
-    <div class="err" id="err">Please enter the declarant's and co-owner's names and check the consent box. The witness line is optional.</div>
+    <div class="err" id="err">Please enter both names and check the consent box.</div>
   </div>
 
   <p class="fine">Premium Marketing Solutions LLC &middot; 8257 Meadowwood Dr, Davison, MI 48423</p>
@@ -112,9 +102,6 @@
   <div style="font-size:12px;color:#888;letter-spacing:1px;text-transform:uppercase;">William Alexander Aldred — Declarant</div>
   <div class="sig-final" id="finalSig2" style="margin-top:20px;"></div>
   <div style="font-size:12px;color:#888;letter-spacing:1px;text-transform:uppercase;">Jillian Lopez — Co-owner &amp; CFO</div>
-  <div id="witnessBlock" style="display:none;">
-    <div class="sig-final" id="finalSig3" style="margin-top:20px;"></div>
-    <div style="font-size:12px;color:#888;letter-spacing:1px;text-transform:uppercase;">Chelsea Aldred — Witness</div>
   </div>
   <p id="stampline" style="margin-top:20px;"></p>
   <p>A copy has been sent for the record.</p>
@@ -141,7 +128,6 @@ function validate() {
 function sign() {
   var n1 = document.getElementById('signer1').value.trim();
   var n2 = document.getElementById('signer2').value.trim();
-  var n3 = document.getElementById('signer3').value.trim();
   if (!(n1.length > 1 && n2.length > 1 && document.getElementById('consent').checked)) {
     document.getElementById('err').style.display = 'block'; return;
   }
@@ -149,15 +135,11 @@ function sign() {
   var stamp = now.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ' ET';
   document.getElementById('finalSig1').textContent = n1;
   document.getElementById('finalSig2').textContent = n2;
-  if (n3.length > 1) {
-    document.getElementById('finalSig3').textContent = n3;
-    document.getElementById('witnessBlock').style.display = 'block';
-  }
   document.getElementById('stampline').textContent = 'Signed ' + stamp;
   document.getElementById('formwrap').style.display = 'none';
   document.getElementById('donewrap').style.display = 'block';
   var subject = 'SIGNED: Declaration of the Exolex — ' + n1;
-  var body = 'DECLARATION OF THE EXOLEX — SIGNED\n\nDeclarant: ' + n1 + ' (Founder & Owner, Premium Marketing Solutions LLC)\nAcknowledged: ' + n2 + ' (Co-owner & CFO)\nWitness: ' + (n3.length > 1 ? n3 : '(none)') + '\n\nSigned: ' + stamp + '\nLocation: Davison, Michigan\nToken: EXOLEX-20261022';
+  var body = 'DECLARATION OF THE EXOLEX — SIGNED\n\nDeclarant: ' + n1 + ' (Founder & Owner, Premium Marketing Solutions LLC)\nAcknowledged: ' + n2 + ' (Co-owner & CFO)\nWitness: the declarant and co-owner sign in each other's presence — each other's witness\n\nSigned: ' + stamp + '\nLocation: Davison, Michigan\nToken: EXOLEX-20261022';
   window.location.href = 'mailto:william@premiummarketingsolutionsllc.com'
     + '?subject=' + encodeURIComponent(subject)
     + '&body=' + encodeURIComponent(body);
